@@ -1,21 +1,442 @@
-a{
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
+a {
     text-decoration: none;
     color: white;
 }
-.Navbar{
+
+.Navbar {
     position: fixed;
+
     width: 100%;
     height: 85px;
 }
-.navbar-logo img{
-    width: 136px!important;
+
+.navbar-logo img {
+    width: 136px !important;
     height: 100% !important;
 }
-.navbar-links{
+
+.navbar-links {
     display: flex;
     align-items: center;
     text-align: center;
 }
-.navbar-links-ul{
+
+.navbar-links-ul {
     width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
 }
+
+
+.Home-bottom {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 210px;
+    height: 360px;
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 15px;
+    top: 85px;
+    right: 0;
+    left: 0;
+    display: none;
+}
+
+.Home-bottom li a {
+    width: 100%;
+    display: inline-block;
+}
+
+
+
+.Courses-bottom {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 287px;
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    top: 100%;
+    right: 0;
+    left: 0;
+    align-items: center;
+    display: none;
+}
+
+.Courses-bottom-left {
+    height: 100%;
+    width: 250px;
+    border-right: 1px solid #e5e5e5;
+}
+
+.Courses-bottom-left ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100% !important;
+}
+
+.Courses-bottom-right-top {
+    width: 223px !important;
+    height: 181px !important;
+}
+
+.Courses-bottom-right-top img {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.Courses-bottom-right {
+    justify-content: space-between;
+    width: 70%;
+}
+
+.Courses-bottom-right-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+
+.Events-bottom {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 210px;
+    height: 108px;
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 15px;
+    top: 85px;
+    right: 0;
+    left: 0;
+    display: none;
+}
+
+.Pages-bottom {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 210px;
+    height: 320px;
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 15px;
+    top: 85px;
+    right: 0;
+    left: 0;
+    display: none;
+}
+
+.Pages-bottom li {
+    padding: 10px;
+}
+
+.Form-bottom {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 250px;
+    height: 100px;
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 25px;
+    top: 170px;
+    left: 190px;
+    display: none;
+}
+
+.Forum-hover:hover .Form-bottom {
+    display: flex;
+}
+
+.Gallery-hover:hover .Gallery-bottom {
+    display: flex;
+}
+
+.Gallery-bottom {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 260px;
+    height: 300px;
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 25px;
+    top: 95px;
+    left: 190px;
+    display: none;
+}
+
+.Shop-bottom {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 210px;
+    height: 170px;
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 15px;
+    top: 85px;
+    right: 0;
+    left: 0;
+    display: none;
+}
+
+.Shop-bottom li {
+    padding: 10px;
+}
+
+.Layouts-bottom {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 250px;
+    height: 130px;
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 25px;
+    top: 75px;
+    left: 125px;
+    display: none;
+}
+
+.Layouts-hover:hover .Layouts-bottom {
+    display: flex;
+}
+
+.Pages-bottom2 {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 250px;
+    height: 130px;
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 25px;
+    top: 115px;
+    left: 125px;
+    display: none;
+}
+
+.Pages-hover:hover .Pages-bottom2 {
+    display: flex;
+}
+
+
+.Blog-bottom {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 210px;
+    height: 135px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 15px;
+    top: 85px;
+    right: 0;
+    left: -50px;
+    display: none;
+}
+
+.Post-bottom {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 250px;
+    height: 250px;
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 25px;
+    top: 85px;
+    right: 180px;
+    display: none;
+}
+
+.Post-hover:hover .Post-bottom {
+    display: flex;
+}
+
+.Elements-bottom {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 416px;
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    top: 100%;
+    right: 0;
+    left: 0;
+    align-items: center;
+    display: none;
+}
+
+.Elements-bottom-child-elemnts-any {
+    height: 351px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #e5e5e5;
+    padding: 20px 35px;
+}
+
+
+
+
+
+
+/* add csss  strat*/
+.bg-span-color {
+    background-color: rgb(58, 58, 235);
+    font-size: 14px;
+    width: 40px;
+    height: 20px;
+    color: #e5e5e5;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.any-hover:hover .any {
+    display: flex;
+}
+
+.any-hover {
+    padding: 0 15px;
+    height: 89px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.any a {
+    color: rgb(119, 115, 115);
+    font-weight: 500;
+}
+
+ul li a:hover {
+    color: rgb(53, 51, 51);
+}
+
+.Bars-ions-link {
+    display: none;
+}
+
+/* add csss  end*/
+
+
+/* mediad start navbar  */
+@media(max-width:991px) {
+    .navbar-links {
+        display: none;
+    }
+
+    .Bars-ions-link {
+        display: block;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+        align-items: right;
+        font-size: 22px;
+    }
+    .fa-bars{
+        cursor: pointer;
+    }
+}
+
+/* mediad end navbar  */
+
+
+
+
+/* overlay menu start */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s width ease;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 32px;
+  }
+  .overlay-active{
+    width: 50%;
+    
+  }
+  
+  
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay {
+    font-size: 22px;
+    top: 15px;
+    right: 35px;
+    }
+  }
+
+/* overlay menu end */
