@@ -7,7 +7,7 @@ import corusesimg3 from "./img/course-img-6.jpg";
 // img end
 import "./Navbar.css";
 const Navbar = () => {
-  const [navbarColor, setNavbarColor] = useState("#888");
+  const [navbarColor, setNavbarColor] = useState("rgba(0, 0, 0, 0.25)");
   // navbar scroll start
   const handleScroll = () => {
     // Scroll olayının gerçekleştiği noktayı alın
@@ -17,7 +17,7 @@ const Navbar = () => {
     if (scrollY > 50) {
       setNavbarColor("white");
     } else {
-      setNavbarColor("#888");
+      setNavbarColor("rgba(0, 0, 0, 0.25)");
     }
   };
 
@@ -37,8 +37,74 @@ const Navbar = () => {
   const OpenCloseClick = () => {
     setmenuOpen(!menuOpen);
   };
-  
   // overlay menu end
+  // -----------------
+  // action click start
+  const [action, setaction] = useState(false);
+  const homeActionClick = () => {
+    setaction(!action);
+  };
+  const [CoursesAction, setCoursesAction] = useState(false);
+  const coursesActionClick = () => {
+    setCoursesAction(!CoursesAction);
+  };
+  const [EventsAction, setEventsAction] = useState(false);
+  const EventsActionClick = () => {
+    setEventsAction(!EventsAction);
+  };
+  const [pagesAction, setpagesAction] = useState(false);
+  const pagesActionClick = () => {
+    setpagesAction(!pagesAction);
+  };
+  const [ShopAction, setShopAction] = useState(false);
+  const shopActionClick = () => {
+    setShopAction(!ShopAction);
+  };
+  const [BlogAction, setBlogAction] = useState(false);
+  const BlogActionClick = () => {
+    setBlogAction(!BlogAction);
+  };
+  const [ElementsAction, setElementsAction] = useState(false);
+  const ElementsActionClick = () => {
+    setElementsAction(!ElementsAction);
+  };
+  // bottom acartion start
+  const [FormAction, setFormAction] = useState(false);
+  const FormActionsClick = () => {
+    setFormAction(!FormAction);
+  };
+  const [gallerAction, setgalleryAction] = useState(false);
+  const galleryActionsClick = () => {
+    setgalleryAction(!gallerAction);
+  };
+  const [layotsAction, setlayotsAction] = useState(false);
+  const layotsActionsClick = () => {
+    setlayotsAction(!layotsAction);
+  };
+  const [pagestAction, setpagestAction] = useState(false);
+  const pagestActionClick = () => {
+    setpagestAction(!pagestAction);
+  };
+  const [postTypseAction, setpostTypseAction] = useState(false);
+  const postTypseActionClick = () => {
+    setpostTypseAction(!postTypseAction);
+  };
+  const [shortCodesAction, setshortCodesAction] = useState(false);
+  const shortCodesActionClick = () => {
+    setshortCodesAction(!shortCodesAction);
+  };
+  const [classicAction, setclassicAction] = useState(false);
+  const classicActionClick = () => {
+    setclassicAction(!classicAction);
+  };
+  const [infographicAction, setinfographicAction] = useState(false);
+  const infographicActionClick = () => {
+    setinfographicAction(!infographicAction);
+  };
+
+  // bottom acartion end
+
+  // action click end
   return (
     <header className="Navbar" style={{ backgroundColor: navbarColor }}>
       <div className="container ">
@@ -181,7 +247,7 @@ const Navbar = () => {
                     <a href="">FAQ Page</a>
                   </li>
                   <li className="Forum-hover position-static">
-                    <a href="">
+                    <a href="#">
                       Forum <i class="fa-solid fa-angle-right"></i>
                     </a>
                     <ul className="Form-bottom ">
@@ -371,20 +437,391 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      {/*  */}
-
-      {/*  */}
       
-        <div className={`overlay ${menuOpen ? "overlay-active" : ""}`}>
-          <a  className="closebtn"><i onClick={OpenCloseClick} class="fa-solid fa-bars"></i></a>
-          <div className="overlay-content">
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
-          </div>
+    {/* overlay menu accardions start */}
+      <div className={`overlay ${menuOpen ? "overlay-active" : ""}`}>
+        <a className="closebtn">
+          <i onClick={OpenCloseClick} className="fa-solid fa-x"></i>
+        </a>
+        <div className="overlay-content">
+          <ul>
+            <li>
+              <a onClick={homeActionClick} href="#">
+                HOME <i className="fa-solid fa-angle-right"></i>
+              </a>
+              <ul
+                className={`mobile-nav-any ${
+                  action ? " mobile-nav-any-actiove" : ""
+                }`}
+              >
+                <li>
+                  <a href="">University</a>
+                </li>
+                <li>
+                  <a href="">Kindergarten</a>
+                </li>
+                <li>
+                  <a href="">Language School</a>
+                </li>
+                <li>
+                  <a href="">Playroom</a>
+                </li>
+                <li>
+                  <a href="">Online Courses</a>
+                </li>
+                <li>
+                  <a href="">College</a>
+                </li>
+                <li>
+                  <a href="">Elementary School</a>
+                </li>
+                <li>
+                  <a href="">Coming Soon</a>
+                </li>
+                <li>
+                  <a href="">Ballent School</a>
+                </li>
+                <li>
+                  <a href="">Landing</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a onClick={coursesActionClick} href="#">
+                COURSES <i className="fa-solid fa-angle-right"></i>
+              </a>
+              <ul
+                className={`mobile-nav-any ${
+                  CoursesAction ? " mobile-nav-any-actiove" : ""
+                }`}
+              >
+                <li>
+                  <a href="">Courses List 3 Columns</a>
+                </li>
+                <li>
+                  <a href="">Courses List 4 Coluumns</a>
+                </li>
+                <li>
+                  <a href="">Course Single</a>
+                </li>
+                <li>
+                  <a href="">Course Simple Single</a>
+                </li>
+                <li>
+                  <a href="">User Dashboard</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a onClick={EventsActionClick} href="#">
+                EVENTS <i className="fa-solid fa-angle-right"></i>
+                </a>
+                <ul
+                  className={`mobile-nav-any ${
+                    EventsAction ? " mobile-nav-any-actiove" : ""
+                  }`}
+                >
+                  <li>
+                    <a href="">Events Calendar</a>
+                  </li>
+                  <li>
+                    <a href="">Events List</a>
+                  </li>
+                  <li>
+                    <a href="">Events Single</a>
+                  </li>
+                </ul>
+            </li>
+            <li>
+              <a onClick={pagesActionClick} href="#">
+                PAGES <i className="fa-solid fa-angle-right"></i>
+              </a>
+              <ul
+                className={`mobile-nav-any ${
+                  pagesAction ? " mobile-nav-any-actiove" : ""
+                }`}
+              >
+                <li>
+                  <a href="">our Teachers</a>
+                </li>
+                <li>
+                  <a href="">About</a>
+                </li>
+                <li>
+                  <a href="">About me</a>
+                </li>
+                <li>
+                  <a href="">Contact Us</a>
+                </li>
+                <li>
+                  <a href="">FAQ Page</a>
+                </li>
+                <li>
+                  <a onClick={FormActionsClick} href="#">
+                    Forum
+                  </a>{" "}
+                  <i class="fa-solid fa-caret-right"></i>
+                  <ul
+                    className={`mobile-nav-any ${
+                      FormAction ? " mobile-nav-any-actiove" : ""
+                    }`}
+                  >
+                    <li>
+                      <a href="">Forum-list</a>
+                    </li>
+                    <li>
+                      <a href="">Forum Topic</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a onClick={galleryActionsClick} href="#">
+                    Gallery
+                  </a>{" "}
+                  <i class="fa-solid fa-caret-right"></i>
+                  <ul
+                    className={`mobile-nav-any ${
+                      gallerAction ? "mobile-nav-any-actiove" : ""
+                    }`}
+                  >
+                    <li>
+                      <a href="">Standard Two Columns</a>
+                    </li>
+                    <li>
+                      <a href="">Standard Three Columns</a>
+                    </li>
+                    <li>
+                      <a href="">Big Slider</a>
+                    </li>
+                    <li>
+                      <a href="">Small Slider</a>
+                    </li>
+                    <li>
+                      <a href="">Big Images</a>
+                    </li>
+                    <li>
+                      <a href="">Masonry</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="">404 Page</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a onClick={shopActionClick} href="#">
+                SHOP <i className="fa-solid fa-angle-right"> </i>
+              </a>
+                <ul
+                  className={`mobile-nav-any ${
+                    ShopAction ? " mobile-nav-any-actiove" : ""
+                  }`}
+                >
+                  <li>
+                    <a href="">shop List</a>
+                  </li>
+                  <li>
+                    <a href="">Product Single</a>
+                  </li>
+                  <li>
+                    <a onClick={layotsActionsClick} href="#">Layouts</a>{" "}
+                    <i class="fa-solid fa-caret-right"></i>
+                    <ul className={`mobile-nav-any ${
+                    layotsAction ? " mobile-nav-any-actiove" : ""
+                  }`}>
+                      <li>
+                        <a href="">Three Columns Grid</a>
+                      </li>
+                      <li>
+                        <a href="">Four Columns Grid</a>
+                      </li>
+                      <li>
+                        <a href="">Five Columns Wide</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a onClick={pagestActionClick} href="#">Pages</a> <i class="fa-solid fa-caret-right"></i>
+                    <ul className={`mobile-nav-any ${
+                    pagestAction ? " mobile-nav-any-actiove" : ""
+                  }`}>
+                      <li>
+                        <a href="">My Account</a>
+                      </li>
+                      <li>
+                        <a href="">Cart</a>
+                      </li>
+                      <li>
+                        <a href="">Checkout</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              
+            </li>
+            <li>
+              <a onClick={BlogActionClick} href="#">
+                BLOG <i className="fa-solid fa-angle-right"></i>
+              </a>
+              <ul
+                className={`mobile-nav-any ${
+                  BlogAction ? " mobile-nav-any-actiove" : ""
+                }`}
+              >
+                <li>
+                  <a href="">Standard List</a>
+                </li>
+                <li>
+                  <a href="">Masonry List</a>
+                </li>
+                <li>
+                  <a onClick={postTypseActionClick} href="#">Post Types</a>{" "}
+                  <i class="fa-solid fa-caret-right"></i>
+                  <ul
+                  className={`mobile-nav-any ${
+                    postTypseAction ? "mobile-nav-any-actiove" : ""
+                  }`}
+                  >
+                    <li>
+                      <a href="">Standard Post</a>
+                    </li>
+                    <li>
+                      <a href="">Gallery Post</a>
+                    </li>
+                    <li>
+                      <a href="">Link Post</a>
+                    </li>
+                    <li>
+                      <a href="">Quote Post</a>
+                    </li>
+                    <li>
+                      <a href="">Video Psot</a>
+                    </li>
+                    <li>
+                      <a href="">audio Post</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a onClick={ElementsActionClick} href="#">
+                ELEMENTS <i className="fa-solid fa-angle-right"></i>
+              </a>
+              <ul
+                className={`mobile-nav-any ${
+                  ElementsAction ? " mobile-nav-any-actiove" : ""
+                }`}
+              >
+                <li>
+                  <a onClick={shortCodesActionClick} href="#">Course Shortcodes</a>{" "}
+                  <i class="fa-solid fa-caret-right"></i>
+                  <ul
+                  className={`mobile-nav-any ${
+                    shortCodesAction ? " mobile-nav-any-actiove" : ""
+                  }`}
+                  >
+                    <li>
+                      <a href="">Course List</a>
+                    </li>
+                    <li>
+                      <a href="">Course Slider</a>
+                    </li>
+                    <li>
+                      <a href="">Course Table</a>
+                    </li>
+                    <li>
+                      <a href="">Course Features</a>
+                    </li>
+                    <li>
+                      <a href="">Instructor Slider</a>
+                    </li>
+                    <li>
+                      <a href="">Instructor List</a>
+                    </li>
+                    <li>
+                      <a href="">Advanced Course Search</a>
+                    </li>
+                    <li>
+                      <a href="">Linked Image List</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a onClick={classicActionClick} href="#">Classic</a> <i class="fa-solid fa-caret-right"></i>
+                  <ul className={`mobile-nav-any ${
+                    classicAction ? " mobile-nav-any-actiove" : ""
+                  }`}>
+                    <li>
+                      <a href="">Accordions & Toggles</a>
+                    </li>
+                    <li>
+                      <a href="">Tabs</a>
+                    </li>
+                    <li>
+                      <a href="">Buttons</a>
+                    </li>
+                    <li>
+                      <a href="">Calls to Action</a>
+                    </li>
+                    <li>
+                      <a href="">Blog Lists</a>
+                    </li>
+                    <li>
+                      <a href="">Contact Forms</a>
+                    </li>
+                    <li>
+                      <a href="">Separtors</a>
+                    </li>
+                    <li>
+                      <a href="">Testiomnials</a>
+                    </li>
+                    <li>
+                      <a href="">Typography</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a onClick={infographicActionClick} href="#">Infograpich</a>{" "}
+                  <i class="fa-solid fa-caret-right"></i>
+                  <ul
+                  className={`mobile-nav-any ${
+                    infographicAction ? " mobile-nav-any-actiove" : ""
+                  }`}
+                  >
+                    <li>
+                      <a href="">Counters</a>
+                    </li>
+                    <li>
+                      <a href="">Countdown</a>
+                    </li>
+                    <li>
+                      <a href="">Pie Charts</a>
+                    </li>
+                    <li>
+                      <a href="">Google Maps</a>
+                    </li>
+                    <li>
+                      <a href="">Process</a>
+                    </li>
+                    <li>
+                      <a href="">Progress Bars</a>
+                    </li>
+                    <li>
+                      <a href="">Pricing Tables</a>
+                    </li>
+                    <li>
+                      <a href="">Interactive Icon Showcase</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
-      
+      </div>
+    {/* overlay menu accardions end */}
     </header>
   );
 };
