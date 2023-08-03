@@ -248,7 +248,7 @@ const Navbar = () => {
                   </li>
                   <li className="Forum-hover position-static">
                     <a href="#">
-                      Forum <i class="fa-solid fa-angle-right"></i>
+                      Forum <i className="fa-solid fa-angle-right"></i>
                     </a>
                     <ul className="Form-bottom ">
                       <li>
@@ -261,7 +261,7 @@ const Navbar = () => {
                   </li>
                   <li className="Gallery-hover">
                     <a href="">
-                      Gallery <i class="fa-solid fa-angle-right"></i>
+                      Gallery <i className="fa-solid fa-angle-right"></i>
                     </a>
                     <ul className="Gallery-bottom">
                       <li>
@@ -303,7 +303,7 @@ const Navbar = () => {
                   </li>
                   <li className="Layouts-hover">
                     <a href="">Layouts</a>{" "}
-                    <i class="fa-solid fa-angle-right"></i>
+                    <i className="fa-solid fa-angle-right"></i>
                     <ul className="Layouts-bottom">
                       <li>
                         <a href="">Three Column Grid</a>
@@ -317,7 +317,7 @@ const Navbar = () => {
                     </ul>
                   </li>
                   <li className="Pages-hover">
-                    <a href="">Pages</a> <i class="fa-solid fa-angle-right"></i>
+                    <a href="">Pages</a> <i className="fa-solid fa-angle-right"></i>
                     <ul className="Pages-bottom2">
                       <li>
                         <a href="">My Account</a>
@@ -342,7 +342,7 @@ const Navbar = () => {
                     <a href="">Masonry List</a>
                   </li>
                   <li className="Post-hover ">
-                    <i class="fa-solid fa-angle-left"></i>
+                    <i className="fa-solid fa-angle-left"></i>
                     <a href="">Post Types</a>
 
                     <ul className="Post-bottom">
@@ -422,18 +422,18 @@ const Navbar = () => {
               </li>
               <li className="any-hover">
                 <a href="">
-                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <i className="fa-solid fa-magnifying-glass"></i>
                 </a>
               </li>
               <li className="any-hover">
                 <a href="">
-                  <i class="fa-solid fa-bars"></i>
+                  <i className="fa-solid fa-bars"></i>
                 </a>
               </li>
             </ul>
           </div>
           <div className="Bars-ions-link col-md-6 col-lg-7">
-            <i onClick={OpenCloseClick} class="fa-solid fa-bars"></i>
+            <i onClick={OpenCloseClick} className="fa-solid fa-bars"></i>
           </div>
         </div>
       </div>
@@ -560,7 +560,7 @@ const Navbar = () => {
                   <a onClick={FormActionsClick} href="#">
                     Forum
                   </a>{" "}
-                  <i class="fa-solid fa-caret-right"></i>
+                  <i className="fa-solid fa-caret-right"></i>
                   <ul
                     className={`mobile-nav-any ${
                       FormAction ? " mobile-nav-any-actiove" : ""
@@ -578,7 +578,7 @@ const Navbar = () => {
                   <a onClick={galleryActionsClick} href="#">
                     Gallery
                   </a>{" "}
-                  <i class="fa-solid fa-caret-right"></i>
+                  <i className="fa-solid fa-caret-right"></i>
                   <ul
                     className={`mobile-nav-any ${
                       gallerAction ? "mobile-nav-any-actiove" : ""
@@ -626,7 +626,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <a onClick={layotsActionsClick} href="#">Layouts</a>{" "}
-                    <i class="fa-solid fa-caret-right"></i>
+                    <i className="fa-solid fa-caret-right"></i>
                     <ul className={`mobile-nav-any ${
                     layotsAction ? " mobile-nav-any-actiove" : ""
                   }`}>
@@ -642,7 +642,7 @@ const Navbar = () => {
                     </ul>
                   </li>
                   <li>
-                    <a onClick={pagestActionClick} href="#">Pages</a> <i class="fa-solid fa-caret-right"></i>
+                    <a onClick={pagestActionClick} href="#">Pages</a> <i className="fa-solid fa-caret-right"></i>
                     <ul className={`mobile-nav-any ${
                     pagestAction ? " mobile-nav-any-actiove" : ""
                   }`}>
@@ -677,7 +677,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a onClick={postTypseActionClick} href="#">Post Types</a>{" "}
-                  <i class="fa-solid fa-caret-right"></i>
+                  <i className="fa-solid fa-caret-right"></i>
                   <ul
                   className={`mobile-nav-any ${
                     postTypseAction ? "mobile-nav-any-actiove" : ""
@@ -716,7 +716,7 @@ const Navbar = () => {
               >
                 <li>
                   <a onClick={shortCodesActionClick} href="#">Course Shortcodes</a>{" "}
-                  <i class="fa-solid fa-caret-right"></i>
+                  <i className="fa-solid fa-caret-right"></i>
                   <ul
                   className={`mobile-nav-any ${
                     shortCodesAction ? " mobile-nav-any-actiove" : ""
@@ -749,7 +749,7 @@ const Navbar = () => {
                   </ul>
                 </li>
                 <li>
-                  <a onClick={classicActionClick} href="#">Classic</a> <i class="fa-solid fa-caret-right"></i>
+                  <a onClick={classicActionClick} href="#">Classic</a> <i className="fa-solid fa-caret-right"></i>
                   <ul className={`mobile-nav-any ${
                     classicAction ? " mobile-nav-any-actiove" : ""
                   }`}>
@@ -784,7 +784,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a onClick={infographicActionClick} href="#">Infograpich</a>{" "}
-                  <i class="fa-solid fa-caret-right"></i>
+                  <i className="fa-solid fa-caret-right"></i>
                   <ul
                   className={`mobile-nav-any ${
                     infographicAction ? " mobile-nav-any-actiove" : ""

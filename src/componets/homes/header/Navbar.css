@@ -210,16 +210,16 @@ a {
 .Layouts-bottom {
     position: absolute;
     background-color: rgb(255, 255, 255);
-    width: 250px;
+    width: 350px;
     height: 130px;
-    text-align: left;
+    text-align: center;
     font-size: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 15px 25px;
-    top: 75px;
-    left: 125px;
+    top: 40px;
+    left: 150px;
     display: none;
 }
 
@@ -230,16 +230,16 @@ a {
 .Pages-bottom2 {
     position: absolute;
     background-color: rgb(255, 255, 255);
-    width: 250px;
+    width: 350px;
     height: 130px;
-    text-align: left;
+    text-align: center;
     font-size: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 15px 25px;
-    top: 115px;
-    left: 125px;
+    top: 40px;
+    left: 150px;
     display: none;
 }
 

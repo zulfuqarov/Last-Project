@@ -1,21 +1,94 @@
-.mySwiper{
+.mySwiper {
     width: 100%;
     height: 100vh;
-    /* z-index: -9999; */
 }
-/* .swiper-img-any{
-    height: 100%;
-    z-index: -9999;
-    position: relative;
-}
-.swiper-img-any img{
-    width: 100%;
-    height: 100%;
-} */
-.swiper-back-fon{
-    background-image: url(img/header-img11.jpg);
+
+.swiper-back-fon-any {
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; 
-    position: absolute;
+    background-size: cover;
+    transition: transform 0.5s;
+    display: flex;
+    align-items: center;
+}
+.swiper-back-fon-any:hover {
+    transform: scale(1.01);
+  }
+.swiper-back-fon {
+    background-image: url(img/h3-slide-1.jpg);
+
+}
+
+.swiper-back-fon2 {
+    background-image: url(img/h3-slide-2.jpg);
+}
+
+.swiper-back-fon3 {
+    background-image: url(img/h3-slide-3.jpg);
+
+}
+
+.swiper-back-fon4 {
+    background-image: url(img/h3-slide-4.jpg);
+}
+.swiper-back-fon5 {
+    background-image: url(img/h3-slide-5.jpg);
+}
+.header-center{
+    width: 100%;
+    height: 57%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.header-imgs{
+    width: 125px;
+    height: 107px;
+    align-self: center;
+}
+.header-imgs img {
+    width: 100%;
+    height: 100%;
+}
+.header-abouts{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-abouts h1{
+    font-size: 80px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.header-abouts h4{
+    font-size: 21px;
+    color: white;
+    letter-spacing: 1px;
+}
+.header-abouts-btn{
+    width: 180px;
+    height: 56px;
+    border: none;
+    color: black;
+    font-weight: 700;
+}
+.header-abouts-btn:hover {
+    background-color: rgb(77, 104, 255);
+    color: white;
+}
+@media(max-width:991px){
+    .header-abouts h1{
+        font-size: 32 px;
+    }
+    .header-abouts h4{
+        font-size: 18px;
+    }
+    .header-abouts-btn{
+        width: 180px;
+        height: 56px;
+    }
 }
