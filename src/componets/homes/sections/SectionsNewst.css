@@ -11,4 +11,55 @@
     font-size: 18px;
     color: #888888;
     line-height: 30px;
+    
+}
+
+.Newst-Events-card-img{
+    width: 344px;
+}
+.Newst-Events-card-img img{
+    width: 100%;
+}
+.Newst-Events-card-img:hover .newest-date{
+    background-color: #2a2a2b;
+}
+.newest-date{
+    position: relative;
+    top: 70px;
+    left: 0;
+    background-color: #2d76b2;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    color: white !important;
+    font-weight: 600;
+    font-size: 22px !important;
+    transition: 0.5s all ease;
+}
+.Newst-Events-card h1{
+    font-size: 32px;
+    color: #434343;
+    font-weight: 700;
+    padding: 25px 0;
+    border-bottom: 1px solid #c9c9c9;
+}
+.Newst-Events-card span{
+    font-size: 14px;
+    color: #888888;
+    display: inline-block;
+    padding: 15px 0;
+    line-height: 25px;
+}
+@media(max-width:768px){
+    .Sections-Newst-Events >h1{
+        font-size: 28px;
+    }
+    .Sections-Newst-Events >span{
+        font-size: 16px;
+    }
+}
+@media(max-width:548px){
+    .Sections-Newst{
+        padding-top: 250px;
+    }
 }

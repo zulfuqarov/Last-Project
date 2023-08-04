@@ -13,7 +13,7 @@ const Navbar = () => {
     // Scroll olayının gerçekleştiği noktayı alın
     const scrollY = window.scrollY;
 
-    // Scroll değerine göre navbar rengini belirleyin
+    
     if (scrollY > 50) {
       setNavbarColor("white");
     } else {
@@ -22,7 +22,7 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    // Scroll olayını dinleyin
+    
     window.addEventListener("scroll", handleScroll);
 
     // Komponent çıkışında scroll olayını kaldırın
