@@ -109,10 +109,10 @@ const Navbar = () => {
     <header className="Navbar" style={{ backgroundColor: navbarColor }}>
       <div className="container ">
         <div className="row">
-          <div className="navbar-logo col-md-6 col-lg-4">
+          <div className="navbar-logo col-6 col-md-6 col-lg-4">
             <img src={Logo} alt="" />
           </div>
-          <div className="navbar-links col-md-6  col-lg-7">
+          <div className="navbar-links col-6 col-md-6  col-lg-7">
             <ul className="navbar-links-ul d-flex justify-content-between">
               <li className="any-hover">
                 <a href="">HOME</a>
@@ -432,7 +432,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <div className="Bars-ions-link col-md-6 col-lg-7">
+          <div className="Bars-ions-link col-6 col-md-6 col-lg-7">
             <i onClick={OpenCloseClick} className="fa-solid fa-bars"></i>
           </div>
         </div>

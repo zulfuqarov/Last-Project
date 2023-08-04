@@ -432,7 +432,11 @@ ul li a:hover {
     width: 50%;
     
   }
-  
+  @media(max-width:768px){
+    .overlay-active{
+        width: 80%;
+    }
+  }
   
   
   @media screen and (max-height: 450px) {

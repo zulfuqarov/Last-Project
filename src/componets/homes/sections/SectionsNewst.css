@@ -1,0 +1,14 @@
+.Sections-Newst{
+    padding-top: 150px;
+}
+.Sections-Newst-Events >h1{
+    font-size: 40px;
+    font-weight: 700;
+    color: #434343;
+    padding-bottom: 40px;
+}
+.Sections-Newst-Events >span{
+    font-size: 18px;
+    color: #888888;
+    line-height: 30px;
+}
