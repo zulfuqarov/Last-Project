@@ -2,7 +2,7 @@ import React from "react";
 
 const propscard = ({ newesth1, newestspan1, newestspan2,Newestimg }) => {
   return (
-    <div className="Newst-Events-card  col-12 col-md-4">
+    <div className="Newst-Events-card  col-12 col-md-6 col-lg-4">
       <div className="Newst-Events-card-img">
         <div>
           <span className="newest-date">

@@ -3,8 +3,8 @@ import Navbar from './header/Navbar'
 import Header from './header/Header'
 import SectionsWelcome from './sections/SectionsWelcome'
 import SectionsNewest from './sections/SectionsNewest'
-
-
+import SectionsParalax from './sections/SectionsParalax'
+import SectionCountr from './sections/SectionCountr'
 const Home = () => {
   return (
    <div>
@@ -12,6 +12,8 @@ const Home = () => {
    <Header />
    <SectionsWelcome/>
    <SectionsNewest/>
+   <SectionsParalax/>
+   <SectionCountr/>
    </div>
   )
 }

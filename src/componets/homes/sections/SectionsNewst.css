@@ -14,12 +14,7 @@
     
 }
 
-.Newst-Events-card-img{
-    width: 344px;
-}
-.Newst-Events-card-img img{
-    width: 100%;
-}
+
 .Newst-Events-card-img:hover .newest-date{
     background-color: #2a2a2b;
 }
@@ -49,6 +44,15 @@
     display: inline-block;
     padding: 15px 0;
     line-height: 25px;
+}
+
+.Newst-Events-card-img img{
+    width: 100%;
+}
+@media(min-width:1200px){
+    .Newst-Events-card-img{
+        width: 344px;
+    }
 }
 @media(max-width:768px){
     .Sections-Newst-Events >h1{

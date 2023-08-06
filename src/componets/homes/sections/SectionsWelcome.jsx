@@ -11,7 +11,7 @@ const SectionsWelcome = () => {
   return (
     <div className="container">
       <section className="Section-Welcome row">
-        <div className="welcome welcome-any col-12 col-md-6">
+        <div className="welcome welcome-any col-12 col-md-12 col-xl-6">
           <h1>Welcome</h1>
 
           <span>
@@ -24,7 +24,7 @@ const SectionsWelcome = () => {
           </div>
         </div>
 
-        <div className="latest welcome-any col-12 col-md-6">
+        <div className="latest welcome-any col-12 col-md-12 col-xl-6">
           <h1>Latest news</h1>
 
           <span>
