@@ -1,0 +1,65 @@
+.Sections-Cards {
+    padding-top: 100px;
+}
+
+.Sections-Popular {
+    padding-bottom: 60px;
+}
+
+.Sections-Popular h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #434343;
+    padding-bottom: 40px;
+}
+
+.Sections-Popular span {
+    font-size: 18px;
+    color: #888888;
+    line-height: 30px;
+}
+
+.Popular-img {
+    width: 250px;
+}
+
+.Popular-img img {
+    width: 100%;
+}
+.fa-heart{
+    font-size: 14px;
+}
+.Popular-icons {
+    position: relative;
+    top: 30px;
+    left: 0;
+    float: right;
+    background-color: #2d76b2;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: white !important;
+    font-weight: 600;
+    font-size: 22px !important;
+    transition: 0.5s all ease;
+    opacity: 0;
+}
+.Popular-img:hover .Popular-icons{
+    opacity: 1;
+}
+.about-top h1{
+    font-size: 20px;
+    color: #434343;
+    font-weight: 700;
+}
+.about-top span{
+    padding: 4px 9px;
+    background-color: #2d76b2;
+    color: white;
+    font-size: 14px;
+}
+.about-bottom a{
+    color: #888888;
+    text-align: left !important;
+    /* padding: ; */
+}

@@ -92,3 +92,20 @@
         height: 56px;
     }
 }
+@media(max-width:548px){
+    .header-abouts h1{
+        font-size: 24px;
+    }
+    .header-abouts h4{
+        font-size: 16px;
+    }
+    .header-abouts-btn{
+        width: 150px;
+        height: 56px;
+    }
+    .header-imgs{
+        width: 105px;
+        height: 87px;
+        align-self: center;
+    }
+}

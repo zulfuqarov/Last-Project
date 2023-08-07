@@ -3,7 +3,7 @@ import "./SectionsParalax.css";
 const SectionsParalax = () => {
   return (
     <section className="Section-paralaxe">
-      <div className="Paralaxe-about">
+      <div className="Paralaxe-about media-any-paralax">
         <a href="">
           {" "}
           <i class="fa-solid fa-graduation-cap"></i> Description
@@ -17,7 +17,7 @@ const SectionsParalax = () => {
           <i class="fa-light fa-user-group"></i>Teachers
         </a>
       </div>
-      <div className="Paralaxe-about-span">
+      <div className="Paralaxe-about-span media-any-paralax">
         <span>
           Mauris et diam pellentesque ex fermentum consectetur. Curabitur non{" "}
           <br />

@@ -33,3 +33,17 @@
     line-height: 25px;
     color: rgb(156, 156, 156);
 }
+@media(max-width:991px){
+
+    .Paralaxe-about{
+        padding: 20px 0 20px 20px;
+    }
+    .Paralaxe-about-span{
+        padding-left: 20px;
+    }
+    .Section-paralaxe{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

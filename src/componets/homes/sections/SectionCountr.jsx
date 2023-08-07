@@ -18,7 +18,7 @@ const SectionCountr = () => {
           onEnter={tureScrollUp}
           onExit={falseScrollUp}
         >
-          <div className="col-12 col-md-6 col-lg-3 text-center countr-span countr-any">
+          <div className="col-6 col-md-6 col-lg-3 text-center countr-span countr-any">
             <i class="fa-solid fa-graduation-cap"></i>
             <h1>
               {scrollUp && (
@@ -28,7 +28,7 @@ const SectionCountr = () => {
             <span>Success Stories</span>
           </div>
 
-          <div className="col-12 col-md-6 col-lg-3 text-center countr-span countr-any">
+          <div className="col-6 col-md-6 col-lg-3 text-center countr-span countr-any">
             <i class="fa-solid fa-id-card"></i>
             <h1>
               {scrollUp && (
@@ -38,7 +38,7 @@ const SectionCountr = () => {
             <span>Trusted Tutors</span>
           </div>
 
-          <div className="col-12 col-md-6 col-lg-3 text-center countr-span countr-any">
+          <div className="col-6 col-md-6 col-lg-3 text-center countr-span countr-any">
             <i class="fa-solid fa-calendar-days"></i>
             <h1>
               {scrollUp && (
@@ -48,7 +48,7 @@ const SectionCountr = () => {
             <span>Scheduled Events</span>
           </div>
 
-          <div className="col-12 col-md-6 col-lg-3 text-center countr-span countr-any">
+          <div className="col-6 col-md-6 col-lg-3 text-center countr-span countr-any">
             <i class="fa-solid fa-laptop"></i>
             <h1>
               {scrollUp && (
