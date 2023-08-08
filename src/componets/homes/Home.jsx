@@ -6,6 +6,7 @@ import SectionsNewest from './sections/SectionsNewest'
 import SectionsParalax from './sections/SectionsParalax'
 import SectionCountr from './sections/SectionCountr'
 import SectionsCards from './sections/SectionsCards'
+import SectionSign from './sections/SectionSign'
 const Home = () => {
   return (
    <div>
@@ -16,6 +17,7 @@ const Home = () => {
    <SectionsParalax/>
    <SectionCountr/>
    <SectionsCards/>
+   <SectionSign/>
    </div>
   )
 }
