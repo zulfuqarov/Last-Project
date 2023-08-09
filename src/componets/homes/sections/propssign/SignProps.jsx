@@ -111,24 +111,35 @@ const SignProps = () => {
       document.getElementById("password"),
       document.getElementById("repassword"),
     ];
+    const isAnyInvalid = inputlar.every((input) =>
+    input.classList.contains("is-valid")
+  );
 
+  if (isAnyInvalid) { 
+    alert("Email sms ugurla gonderildi");
+    return;
+  }
+  else if (!isAnyInvalid){
+   alert("xahis edilir duzgun daxil olasiz");
+  }
+  
+  
     CheckRequired(inputlar);
     CheckLength(nameInput);
     CheckEmail(emailInput);
     CheckPasswordCorrect(passwordInput, repasswordInput);
+ 
+    
+ 
+   
 
-    const isAnyInvalid = inputlar.some((input) =>
-    input.classList.contains("is-invalid")
-  );
+   
 
-  if (isAnyInvalid) {
-    // En az bir hatalı alan varsa formu submit etme
-    alert("Please correct the errors before submitting.");
-  } else {
-    // Tüm alanlar doğruysa formu submit et veya istediğiniz işlemi yap
-    alert("Form submitted successfully!");
+
+    
+  
   }
-  }
+
   // submit confirm end
   return (
     <form id="form" className="sign-Form-div">

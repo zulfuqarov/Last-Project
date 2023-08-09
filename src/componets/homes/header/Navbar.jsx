@@ -10,7 +10,7 @@ const Navbar = () => {
   const [navbarColor, setNavbarColor] = useState("rgba(0, 0, 0, 0.25)");
   // navbar scroll start
   const handleScroll = () => {
-    // Scroll olayının gerçekleştiği noktayı alın
+    
     const scrollY = window.scrollY;
 
     
