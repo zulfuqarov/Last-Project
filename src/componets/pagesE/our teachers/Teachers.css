@@ -53,7 +53,88 @@
     line-height: 25px;
 }
 
+
+
+.pagination {
+    list-style: none;
+    height: 31.5px;
+    width: 31.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #1e50ff;
+    border-radius: 50%;
+}
+
+.page-item {
+    list-style: none;
+    padding: 10px 12px;
+    height: 31.5px;
+    width: 31.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+}
+
+.pagination-div {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+.pagination-div a{
+    color: #212121;
+    padding: 10px;
+}
+.active{
+    color: #1e50ff;
+    background-color: transparent;
+}
+.Teacher-card-about {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.Teacher-cards {
+    padding-top: 40px;
+}
+
+.Teacher-cards h1 {
+    color: #353535;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5em;
+    padding-bottom: 5px;
+}
+
+.Teacher-card-img {
+    width: 252px;
+}
+
+.Teacher-card-img img {
+    width: 100%;
+}
+
+
+
+
+
+
+@media (max-width:1200px) {
+    .Teacher-card-img {
+        width: 215px;
+    }
+}
+
 @media (max-width:768px) {
+    .Teacher-card-img {
+        margin: 0 auto;
+    }
 
     .joseph-img-left img {
         width: 280px;

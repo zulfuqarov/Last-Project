@@ -1,0 +1,144 @@
+{
+    "teachers": [
+        {
+            "name": "Rosa Echols",
+            "faculty": "Teacher",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700885/teachers-2_z0dfya.jpg"
+        },
+        {
+            "name": "Lucas Hall",
+            "faculty": "Assistant",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700903/teachers-3_slxpog.jpg"
+        },
+        {
+            "name": "Becky Curry",
+            "faculty": "Teacher",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700904/teachers-4_gmhpu5.jpg"
+        },
+        {
+            "name": "Aron Corrs",
+            "faculty": "Principal",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700905/teachers-5_npwpaw.jpg"
+        },
+        {
+            "name": "Lisa Jones",
+            "faculty": "Teacher",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700909/teachers-6_a6o8ma.jpg"
+        },
+        {
+            "name": "Marry Burns",
+            "faculty": "Principal",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700911/teachers-8_zkn4cq.jpg"
+        },
+        {
+            "name": "Hyacinth",
+            "faculty": "Teacher",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700911/teachers-7_rbpzzn.jpg"
+        },
+        {
+            "name": "Joan Smith",
+            "faculty": "Assistant",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700911/teachers-8_zkn4cq.jpg"
+        },
+        {
+            "name": "Kim Tims",
+            "faculty": "Teacher",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700912/teachers-9_cf0qst.jpg"
+        },
+        {
+            "name": "Margo",
+            "faculty": "Teacher",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700885/teachers-2_z0dfya.jpg"
+        },
+        {
+            "name": "Rosa Echols",
+            "faculty": "Teacher",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700885/teachers-2_z0dfya.jpg"
+        },
+        {
+            "name": "Lucas Hall",
+            "faculty": "Assistant",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700903/teachers-3_slxpog.jpg"
+        },
+        {
+            "name": "Becky Curry",
+            "faculty": "Teacher",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700904/teachers-4_gmhpu5.jpg"
+        },
+        {
+            "name": "Aron Corrs",
+            "faculty": "Principal",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700905/teachers-5_npwpaw.jpg"
+        },
+        {
+            "name": "Lisa Jones",
+            "faculty": "Teacher",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700909/teachers-6_a6o8ma.jpg"
+        },
+        {
+            "name": "Marry Burns",
+            "faculty": "Principal",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700911/teachers-8_zkn4cq.jpg"
+        },
+        {
+            "name": "Hyacinth",
+            "faculty": "Teacher",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700911/teachers-7_rbpzzn.jpg"
+        },
+        {
+            "name": "Joan Smith",
+            "faculty": "Assistant",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700911/teachers-8_zkn4cq.jpg"
+        },
+        {
+            "name": "Kim Tims",
+            "faculty": "Teacher",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700912/teachers-9_cf0qst.jpg"
+        },
+        {
+            "name": "Rosa Echols",
+            "faculty": "Teacher",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700885/teachers-2_z0dfya.jpg"
+        },
+        {
+            "name": "Lucas Hall",
+            "faculty": "Assistant",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700903/teachers-3_slxpog.jpg"
+        },
+        {
+            "name": "Becky Curry",
+            "faculty": "Teacher",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700904/teachers-4_gmhpu5.jpg"
+        },
+        {
+            "name": "Aron Corrs",
+            "faculty": "Principal",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700905/teachers-5_npwpaw.jpg"
+        },
+        {
+            "name": "Lisa Jones",
+            "faculty": "Teacher",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700909/teachers-6_a6o8ma.jpg"
+        },
+        {
+            "name": "Marry Burns",
+            "faculty": "Principal",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700911/teachers-8_zkn4cq.jpg"
+        },
+        {
+            "name": "Hyacinth",
+            "faculty": "Teacher",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700911/teachers-7_rbpzzn.jpg"
+        },
+        {
+            "name": "Joan Smith",
+            "faculty": "Assistant",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700911/teachers-8_zkn4cq.jpg"
+        },
+        {
+            "name": "Kim Tims",
+            "faculty": "Teacher",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700912/teachers-9_cf0qst.jpg"
+        }
+    ]
+}
