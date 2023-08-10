@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
+
 // img start
 import Logo from "./img/logo-dark.png";
 import corusesimg1 from "./img/course-img-1.jpg";
@@ -115,7 +117,8 @@ const Navbar = () => {
           <div className="navbar-links col-6 col-md-6  col-lg-7">
             <ul className="navbar-links-ul d-flex justify-content-between">
               <li className="any-hover">
-                <a href="">HOME</a>
+                
+                <Link to="/">HOME</Link>
                 <ul className="Home-bottom any">
                   <li>
                     <a href="">University</a>
@@ -232,7 +235,7 @@ const Navbar = () => {
                 <a href="">PAGES</a>
                 <ul className="Pages-bottom any">
                   <li>
-                    <a href="">Our Teachers</a>
+                  <Link to="/Teachers">Our Teachers</Link>
                   </li>
                   <li>
                     <a href="">About</a>
