@@ -2,7 +2,7 @@ import React from 'react'
 
 const CardsProps = ({popularimg,popularabout,popularlinks,popularprice}) => {
   return (
-    <div className=" Popular-cardt col-12 col-md-6 col-lg-3">
+    <div className=" Popular-cardt col-12 col-md-6 col-lg-4 col-xl-3">
       <div className="Popular-img">
         <div className='Popular-icons'>
         <i className="fa-regular fa-heart"></i>

@@ -1,0 +1,81 @@
+.Studying {
+    padding-top: 70px;
+}
+
+.Studying-div h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #434343;
+    padding-bottom: 40px;
+}
+
+.Studying-div {
+    font-size: 18px;
+    color: #888888;
+    line-height: 30px;
+
+}
+
+.Studying-carts {
+    padding-top: 80px;
+}
+
+.Studying-cart-img {
+    width: 346px;
+}
+
+.Studying-cart-img img {
+    width: 100%;
+}
+
+.Studying-cart {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.Studying-cart h1 {
+    color: #434343;
+    font-size: 25px;
+    font-weight: 700;
+}
+.Studying-cart span{
+    font-size: 15px;
+    color: #888888;
+    margin: 12px 0;
+    display: inline-block;
+    line-height: 25px;
+}
+.Studying-cart button{
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    color: #434343;
+    font-weight: 700;
+}
+.Studying-cart button >i{
+    opacity: 0;
+    transition: 0.5s ease all;
+}
+
+.Studying-cart button:hover i{
+    opacity: 1;
+}
+@media (max-width:991px) {
+    .Studying-cart-img {
+        width: 280px;
+    }
+    .Studying-cart {
+        padding: 20px 20px;
+        width: 350px;
+        height: 500px !important;
+    }
+    .Studying-carts-media{
+        justify-content: center;
+    }
+    .Studying-div h1 {
+        font-size: 26px;
+    }
+}
