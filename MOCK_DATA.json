@@ -140,5 +140,77 @@
             "faculty": "Teacher",
             "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691700912/teachers-9_cf0qst.jpg"
         }
+    ],
+    "ShopList": [
+        {
+            "name": "Advanced Design",
+            "price": " $12.00",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961379/product-img-8-600x600_oumspc.jpg"
+        },
+        {
+            "name": "Art Of Seo",
+            "price": "$24.99",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961378/product-img-7-600x600_paygnz.jpg"
+        },
+        {
+            "name": "Brainstorming Time",
+            "price": "$19.99",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961377/product-img-6-600x600_y3w4mk.jpg"
+        },
+        {
+            "name": "Elegant Design",
+            "price": "$21.99",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961376/product-img-4-600x600_wdvcpb.jpg"
+        },
+        {
+            "name": "Famous Painters",
+            "price": "$21.99",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961374/product-img-3-600x600_i2sjub.jpg"
+        },
+        {
+            "name": "First Impressions",
+            "price": "$17.99",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961372/product-img-5-600x600_fokuls.jpg"
+        },
+        {
+            "name": "Global Work",
+            "price": "$26.99",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961369/product-img-2-600x600_vimukz.jpg"
+        },
+        {
+            "name": "Honest Audience",
+            "price": "$26.99",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961367/product-img-1-600x600_sgobx2.jpg"
+        },
+        {
+            "name": "Life of Artist",
+            "price": "$21.99",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961378/product-img-7-600x600_paygnz.jpg"
+        },
+        {
+            "name": "Minimal Design",
+            "price": "$17.99",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961377/product-img-6-600x600_y3w4mk.jpg"
+        },
+        {
+            "name": "New Directions",
+            "price": "$26.99",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961374/product-img-3-600x600_i2sjub.jpg"
+        },
+        {
+            "name": "Popular Science",
+            "price": "$26.99",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961379/product-img-8-600x600_oumspc.jpg"
+        },
+        {
+            "name": "Productive Artist",
+            "price": "$21.99",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961369/product-img-2-600x600_vimukz.jpg"
+        },
+        {
+            "name": "Supreme Style",
+            "price": "$12.00",
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961367/product-img-1-600x600_sgobx2.jpg"
+        }
     ]
 }

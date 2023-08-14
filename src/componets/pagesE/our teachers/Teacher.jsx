@@ -5,6 +5,7 @@ import "./Teachers.css";
 // img start
 import Josephimg from "./imgs/teachers-1.jpg";
 import Josephimzaimg from "./imgs/signature-1.png";
+import NavbarLinksAlllHeader from "../../navbar-all-links-header/NavbarLinksAlllHeader";
 // img end
 
 const itemsPerPage = 8;
@@ -19,7 +20,7 @@ const Teacher = () => {
 
   useEffect(() => {
     axios
-      .get(" http://localhost:9999/teachers")
+      .get("http://localhost:3000/teachers")
       .then((melumat) => setteacher(melumat.data))
       .catch((error) => {
         console.error("api isdeyi basarisiz", error);
@@ -33,12 +34,7 @@ const Teacher = () => {
 
   return (
     <section className="Teacher">
-      <div className="Teacher-back-fon d-flex">
-        <div className="container d-flex justify-content-between">
-          <h1>Our Teachers</h1>
-          <a href="#">Home / Our Teachers</a>
-        </div>
-      </div>
+      <NavbarLinksAlllHeader links='Our Teachers' span='Our Teachers'/>
       <div className="container">
         <section className="section-joseph row">
           <div className="joseph-img-left col-12 col-lg-6">
@@ -75,8 +71,8 @@ const Teacher = () => {
                       <img src={item.img} alt="" />
                     </div>
                     <div className="Teacher-card-about">
-                    <h1>{item.name}</h1>
-                    <span>{item.faculty}</span>
+                      <h1>{item.name}</h1>
+                      <span>{item.faculty}</span>
                     </div>
                   </div>
                 }

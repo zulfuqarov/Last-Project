@@ -7,6 +7,8 @@ import Home from "./pages/Home";
 import Pagesteacher from "./pages/Pagesteacher";
 import Navbar from "./componets/homes/header/Navbar";
 import Footer from "./componets/homes/header/Footer";
+import Shop from "./pages/Shop";
+
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Teachers" element={<Pagesteacher />} />
+        <Route path="Shop-List" element={<Shop />} />        
       </Routes>
       <Footer />
     </>

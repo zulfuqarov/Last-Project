@@ -1,0 +1,126 @@
+.Shop-List {
+    padding-top: 85px;
+}
+
+.Shop-list-carts {
+    padding-top: 80px;
+}
+
+.Shop-list-carts-left-top span {
+    font-size: 14px;
+    color: #ababab;
+}
+
+.Shop-list-carts-left-top select {
+    border: none;
+    width: 180px;
+    border: none !important;
+    font-size: 14px;
+    color: #ababab;
+}
+
+.Shop-list-carts-left-bottom {
+    padding-top: 50px;
+}
+
+.Shop-list-carts-left-bottom-img {
+    width: 248px;
+}
+
+.Shop-list-carts-left-bottom-img img {
+    width: 100%;
+}
+
+.Shop-list-carts-left-bottom-img button {
+    position: relative;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: rgb(80, 80, 255);
+    width: 248px;
+    height: 0px;
+    padding: 0;
+    overflow-y: hidden;
+    transition: 0.3s height ease;
+    bottom: 248px;
+}
+
+.Shop-list-carts-left-bottom-img:hover button {
+    height: 54px;
+}
+
+
+.Shop-list-carts-left-bottom-about span {
+    color: rgb(77, 77, 77);
+    font-size: 18px;
+    font-weight: 700;
+    padding: 15px 0;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.Shop-list-carts-left-bottom-about p {
+    color: rgb(55, 55, 248);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+.shopping-icons-top{
+    padding-bottom: 20px;
+}
+.shopping-icons-img{
+    width: 69px;
+}
+.shopping-icons-img img{
+    width: 100%;
+}
+.shopping-icons-top-span span{
+font-weight: 700;
+font-size: 13px;
+color: rgb(59, 59, 231);
+padding: 10px 0;
+display: inline-block;
+}
+.shopping-icons{
+    width: 280px;
+    height: 230px;
+    background-color: rgb(96, 124, 115);
+    padding: 15px 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 50px;
+}
+.shopping-icons-bottom{
+    border-top: 1px solid #ababab;
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+.shopping-icons-bottom h1{
+    color: #474747;
+    font-size: 14px;
+    font-weight: 700;
+}
+.shopping-icons-bottom-span span{
+    font-weight: 700;
+    color: #0a0a0a;
+    font-size: 14px;
+}
+.shopping-icons-bottom-btn{
+    padding-top: 15px;
+}
+.shopping-icons-bottom-btn button{
+    width: 110px;
+    height: 40px;
+    background-color: #2d76b2;
+    border: none;
+    padding: 0;
+    color: white;
+    font-size: 14px;
+}
+
+
+
+

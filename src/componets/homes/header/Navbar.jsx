@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 // img start
-import Logo from "./img/logo-dark.png";
+import Logo from "./img/logo-light.png";
 import corusesimg1 from "./img/course-img-1.jpg";
 import corusesimg2 from "./img/course-img-2.jpg";
 import corusesimg3 from "./img/course-img-6.jpg";
@@ -12,19 +12,16 @@ const Navbar = () => {
   const [navbarColor, setNavbarColor] = useState("rgba(0, 0, 0, 0.25)");
   // navbar scroll start
   const handleScroll = () => {
-    
     const scrollY = window.scrollY;
 
-    
     if (scrollY > 50) {
-      setNavbarColor("white");
+      setNavbarColor("black");
     } else {
       setNavbarColor("rgba(0, 0, 0, 0.25)");
     }
   };
 
   useEffect(() => {
-    
     window.addEventListener("scroll", handleScroll);
 
     // Komponent çıkışında scroll olayını kaldırın
@@ -117,7 +114,6 @@ const Navbar = () => {
           <div className="navbar-links col-6 col-md-6  col-lg-7">
             <ul className="navbar-links-ul d-flex justify-content-between">
               <li className="any-hover">
-                
                 <Link to="/">HOME</Link>
                 <ul className="Home-bottom any">
                   <li>
@@ -235,7 +231,7 @@ const Navbar = () => {
                 <a href="">PAGES</a>
                 <ul className="Pages-bottom any">
                   <li>
-                  <Link to="/Teachers">Our Teachers</Link>
+                    <Link to="/Teachers">Our Teachers</Link>
                   </li>
                   <li>
                     <a href="">About</a>
@@ -296,10 +292,10 @@ const Navbar = () => {
                 </ul>
               </li>
               <li className="any-hover">
-                <a href="">SHOP</a>
+                <a href="#">SHOP</a>
                 <ul className="Shop-bottom any">
                   <li>
-                    <a href="">Shop List</a>
+                    <Link to="/Shop-List">Shop Lsit</Link>
                   </li>
                   <li>
                     <a href="">Product Single</a>
@@ -320,7 +316,8 @@ const Navbar = () => {
                     </ul>
                   </li>
                   <li className="Pages-hover">
-                    <a href="">Pages</a> <i className="fa-solid fa-angle-right"></i>
+                    <a href="">Pages</a>{" "}
+                    <i className="fa-solid fa-angle-right"></i>
                     <ul className="Pages-bottom2">
                       <li>
                         <a href="">My Account</a>
@@ -430,6 +427,11 @@ const Navbar = () => {
               </li>
               <li className="any-hover">
                 <a href="">
+                  <i className="fa-solid fa-bag-shopping fa-bag-shopping-hover "></i>
+                </a>
+              </li>
+              <li className="any-hover">
+                <a href="">
                   <i className="fa-solid fa-bars"></i>
                 </a>
               </li>
@@ -440,8 +442,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      
-    {/* overlay menu accardions start */}
+
+      {/* overlay menu accardions start */}
       <div className={`overlay ${menuOpen ? "overlay-active" : ""}`}>
         <a className="closebtn">
           <i onClick={OpenCloseClick} className="fa-solid fa-x"></i>
@@ -518,22 +520,22 @@ const Navbar = () => {
             <li>
               <a onClick={EventsActionClick} href="#">
                 EVENTS <i className="fa-solid fa-angle-right"></i>
-                </a>
-                <ul
-                  className={`mobile-nav-any ${
-                    EventsAction ? " mobile-nav-any-actiove" : ""
-                  }`}
-                >
-                  <li>
-                    <a href="">Events Calendar</a>
-                  </li>
-                  <li>
-                    <a href="">Events List</a>
-                  </li>
-                  <li>
-                    <a href="">Events Single</a>
-                  </li>
-                </ul>
+              </a>
+              <ul
+                className={`mobile-nav-any ${
+                  EventsAction ? " mobile-nav-any-actiove" : ""
+                }`}
+              >
+                <li>
+                  <a href="">Events Calendar</a>
+                </li>
+                <li>
+                  <a href="">Events List</a>
+                </li>
+                <li>
+                  <a href="">Events Single</a>
+                </li>
+              </ul>
             </li>
             <li>
               <a onClick={pagesActionClick} href="#">
@@ -616,52 +618,60 @@ const Navbar = () => {
               <a onClick={shopActionClick} href="#">
                 SHOP <i className="fa-solid fa-angle-right"> </i>
               </a>
-                <ul
-                  className={`mobile-nav-any ${
-                    ShopAction ? " mobile-nav-any-actiove" : ""
-                  }`}
-                >
-                  <li>
-                    <a href="">shop List</a>
-                  </li>
-                  <li>
-                    <a href="">Product Single</a>
-                  </li>
-                  <li>
-                    <a onClick={layotsActionsClick} href="#">Layouts</a>{" "}
-                    <i className="fa-solid fa-caret-right"></i>
-                    <ul className={`mobile-nav-any ${
-                    layotsAction ? " mobile-nav-any-actiove" : ""
-                  }`}>
-                      <li>
-                        <a href="">Three Columns Grid</a>
-                      </li>
-                      <li>
-                        <a href="">Four Columns Grid</a>
-                      </li>
-                      <li>
-                        <a href="">Five Columns Wide</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a onClick={pagestActionClick} href="#">Pages</a> <i className="fa-solid fa-caret-right"></i>
-                    <ul className={`mobile-nav-any ${
-                    pagestAction ? " mobile-nav-any-actiove" : ""
-                  }`}>
-                      <li>
-                        <a href="">My Account</a>
-                      </li>
-                      <li>
-                        <a href="">Cart</a>
-                      </li>
-                      <li>
-                        <a href="">Checkout</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              
+              <ul
+                className={`mobile-nav-any ${
+                  ShopAction ? " mobile-nav-any-actiove" : ""
+                }`}
+              >
+                <li>
+                  <a href="">shop List</a>
+                </li>
+                <li>
+                  <a href="">Product Single</a>
+                </li>
+                <li>
+                  <a onClick={layotsActionsClick} href="#">
+                    Layouts
+                  </a>{" "}
+                  <i className="fa-solid fa-caret-right"></i>
+                  <ul
+                    className={`mobile-nav-any ${
+                      layotsAction ? " mobile-nav-any-actiove" : ""
+                    }`}
+                  >
+                    <li>
+                      <a href="">Three Columns Grid</a>
+                    </li>
+                    <li>
+                      <a href="">Four Columns Grid</a>
+                    </li>
+                    <li>
+                      <a href="">Five Columns Wide</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a onClick={pagestActionClick} href="#">
+                    Pages
+                  </a>{" "}
+                  <i className="fa-solid fa-caret-right"></i>
+                  <ul
+                    className={`mobile-nav-any ${
+                      pagestAction ? " mobile-nav-any-actiove" : ""
+                    }`}
+                  >
+                    <li>
+                      <a href="">My Account</a>
+                    </li>
+                    <li>
+                      <a href="">Cart</a>
+                    </li>
+                    <li>
+                      <a href="">Checkout</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </li>
             <li>
               <a onClick={BlogActionClick} href="#">
@@ -679,12 +689,14 @@ const Navbar = () => {
                   <a href="">Masonry List</a>
                 </li>
                 <li>
-                  <a onClick={postTypseActionClick} href="#">Post Types</a>{" "}
+                  <a onClick={postTypseActionClick} href="#">
+                    Post Types
+                  </a>{" "}
                   <i className="fa-solid fa-caret-right"></i>
                   <ul
-                  className={`mobile-nav-any ${
-                    postTypseAction ? "mobile-nav-any-actiove" : ""
-                  }`}
+                    className={`mobile-nav-any ${
+                      postTypseAction ? "mobile-nav-any-actiove" : ""
+                    }`}
                   >
                     <li>
                       <a href="">Standard Post</a>
@@ -718,12 +730,14 @@ const Navbar = () => {
                 }`}
               >
                 <li>
-                  <a onClick={shortCodesActionClick} href="#">Course Shortcodes</a>{" "}
+                  <a onClick={shortCodesActionClick} href="#">
+                    Course Shortcodes
+                  </a>{" "}
                   <i className="fa-solid fa-caret-right"></i>
                   <ul
-                  className={`mobile-nav-any ${
-                    shortCodesAction ? " mobile-nav-any-actiove" : ""
-                  }`}
+                    className={`mobile-nav-any ${
+                      shortCodesAction ? " mobile-nav-any-actiove" : ""
+                    }`}
                   >
                     <li>
                       <a href="">Course List</a>
@@ -752,10 +766,15 @@ const Navbar = () => {
                   </ul>
                 </li>
                 <li>
-                  <a onClick={classicActionClick} href="#">Classic</a> <i className="fa-solid fa-caret-right"></i>
-                  <ul className={`mobile-nav-any ${
-                    classicAction ? " mobile-nav-any-actiove" : ""
-                  }`}>
+                  <a onClick={classicActionClick} href="#">
+                    Classic
+                  </a>{" "}
+                  <i className="fa-solid fa-caret-right"></i>
+                  <ul
+                    className={`mobile-nav-any ${
+                      classicAction ? " mobile-nav-any-actiove" : ""
+                    }`}
+                  >
                     <li>
                       <a href="">Accordions & Toggles</a>
                     </li>
@@ -786,12 +805,14 @@ const Navbar = () => {
                   </ul>
                 </li>
                 <li>
-                  <a onClick={infographicActionClick} href="#">Infograpich</a>{" "}
+                  <a onClick={infographicActionClick} href="#">
+                    Infograpich
+                  </a>{" "}
                   <i className="fa-solid fa-caret-right"></i>
                   <ul
-                  className={`mobile-nav-any ${
-                    infographicAction ? " mobile-nav-any-actiove" : ""
-                  }`}
+                    className={`mobile-nav-any ${
+                      infographicAction ? " mobile-nav-any-actiove" : ""
+                    }`}
                   >
                     <li>
                       <a href="">Counters</a>
@@ -824,7 +845,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-    {/* overlay menu accardions end */}
+      {/* overlay menu accardions end */}
     </header>
   );
 };
