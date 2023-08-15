@@ -32,7 +32,7 @@ const Teacher = () => {
 
   const visibleItems = teacher.slice(startIndex, endIndex);
 
-  return (
+  return ( 
     <section className="Teacher">
       <NavbarLinksAlllHeader links='Our Teachers' span='Our Teachers'/>
       <div className="container">

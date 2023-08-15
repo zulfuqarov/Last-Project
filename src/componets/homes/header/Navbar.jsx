@@ -15,8 +15,10 @@ const Navbar = () => {
   // usecontext start
   const context = useContext(BooksContext);
   // usecontext end
+  const totalPriceBooks = context.state.cart
+    .reduce((total, book) => (total = total + book.price * book.counts), 0)
+    .toFixed(2);
 
-  console.log(context);
   const [navbarColor, setNavbarColor] = useState("rgba(0, 0, 0, 0.25)");
   // navbar scroll start
   const handleScroll = () => {
@@ -28,7 +30,6 @@ const Navbar = () => {
       setNavbarColor("rgba(0, 0, 0, 0.25)");
     }
   };
-
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
@@ -108,7 +109,6 @@ const Navbar = () => {
   const infographicActionClick = () => {
     setinfographicAction(!infographicAction);
   };
-
   // bottom acartion end
 
   // action click end
@@ -475,6 +475,9 @@ const Navbar = () => {
                         <button>WIEV CARD</button>
                         <button>CHECKOUT</button>
                       </div>
+                      <h1 className="pt-4 text-start text-uppercase fs-9">
+                        all total price books:  {totalPriceBooks} $
+                      </h1>
                     </div>
                   </div>
                 </div>
