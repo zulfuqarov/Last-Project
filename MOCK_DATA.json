@@ -142,74 +142,76 @@
         }
     ],
     "ShopList": [
-        {
+        {   "id": "0",
             "name": "Advanced Design",
-            "price": " $12.00",
+            "price": 12.00,
             "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961379/product-img-8-600x600_oumspc.jpg"
         },
         {
+            "id": "1",
             "name": "Art Of Seo",
-            "price": "$24.99",
+            "price": 24.99,
             "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961378/product-img-7-600x600_paygnz.jpg"
         },
         {
+            "id": "2",
             "name": "Brainstorming Time",
-            "price": "$19.99",
+            "price": 19.99,
             "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961377/product-img-6-600x600_y3w4mk.jpg"
         },
-        {
+        {"id": "3",
             "name": "Elegant Design",
-            "price": "$21.99",
+            "price": 21.99,
             "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961376/product-img-4-600x600_wdvcpb.jpg"
         },
-        {
+        {"id": "4",
             "name": "Famous Painters",
-            "price": "$21.99",
+            "price": 21.99,
             "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961374/product-img-3-600x600_i2sjub.jpg"
         },
-        {
+        {"id": "5",
             "name": "First Impressions",
-            "price": "$17.99",
+            "price": 17.99,
             "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961372/product-img-5-600x600_fokuls.jpg"
         },
-        {
+        {"id": "6",
             "name": "Global Work",
-            "price": "$26.99",
+            "price": 26.99,
             "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961369/product-img-2-600x600_vimukz.jpg"
         },
-        {
+        {"id": "7",
             "name": "Honest Audience",
-            "price": "$26.99",
+            "price": 26.99,
             "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961367/product-img-1-600x600_sgobx2.jpg"
         },
-        {
+        {"id": "8",
             "name": "Life of Artist",
-            "price": "$21.99",
+            "price": 21.99,
             "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961378/product-img-7-600x600_paygnz.jpg"
         },
-        {
+        {"id": "9",
             "name": "Minimal Design",
-            "price": "$17.99",
+            "price": 17.99,
             "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961377/product-img-6-600x600_y3w4mk.jpg"
         },
-        {
+        {"id": "10",
             "name": "New Directions",
-            "price": "$26.99",
+            "price": 26.99,
             "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961374/product-img-3-600x600_i2sjub.jpg"
         },
-        {
+        {"id": "11",
             "name": "Popular Science",
-            "price": "$26.99",
+            "price": 26.99,
             "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961379/product-img-8-600x600_oumspc.jpg"
         },
-        {
+        {"id": "12",
             "name": "Productive Artist",
-            "price": "$21.99",
+            "price": 21.99,
             "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961369/product-img-2-600x600_vimukz.jpg"
         },
-        {
+        {"id": "13",
             "name": "Supreme Style",
-            "price": "$12.00",
+            "price": 12.00,
             "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1691961367/product-img-1-600x600_sgobx2.jpg"
         }
     ]

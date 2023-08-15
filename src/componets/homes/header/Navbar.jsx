@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { BooksContext } from "../../../App";
 import { Link } from "react-router-dom";
 
 // img start
@@ -6,9 +7,16 @@ import Logo from "./img/logo-light.png";
 import corusesimg1 from "./img/course-img-1.jpg";
 import corusesimg2 from "./img/course-img-2.jpg";
 import corusesimg3 from "./img/course-img-6.jpg";
+
 // img end
 import "./Navbar.css";
+
 const Navbar = () => {
+  // usecontext start
+  const context = useContext(BooksContext);
+  // usecontext end
+
+  console.log(context);
   const [navbarColor, setNavbarColor] = useState("rgba(0, 0, 0, 0.25)");
   // navbar scroll start
   const handleScroll = () => {
@@ -425,10 +433,51 @@ const Navbar = () => {
                   <i className="fa-solid fa-magnifying-glass"></i>
                 </a>
               </li>
-              <li className="any-hover">
+              <li className="any-hover shoping-icons-hover">
                 <a href="">
-                  <i className="fa-solid fa-bag-shopping fa-bag-shopping-hover "></i>
+                  <i className="fa-solid fa-bag-shopping position-relative ">
+                    <span className="badge position-absolute">
+                      {context.state.totalcount}
+                    </span>
+                  </i>
                 </a>
+                <div className="position-absolute shooping-icons-visible">
+                  <div className="shopping-icons">
+                    {context.state.cart.map((book) => (
+                      <div>
+                        <div className="shopping-icons-top d-flex justify-content-between">
+                          <div className="shopping-icons-img">
+                            <img src={book.img} alt="" />
+                          </div>
+                          <div className="shopping-icons-top-span">
+                            <span>{book.name}</span> <br />
+                            <span>${book.price}</span>
+                            <h1>{book.counts}</h1>
+                          </div>
+                          <div>
+                            <i
+                              onClick={() =>
+                                context.RemoveCartd(book.id, book.counts)
+                              }
+                              class="fa-regular fa-circle-xmark"
+                            ></i>
+                          </div>
+                        </div>
+                        <div className="d-flex justify-content-between shopping-icons-bottom-span">
+                          <h1>ORDER TOTAL:</h1>
+                          <span>${(book.price * book.counts).toFixed(2)}</span>
+                        </div>
+                      </div>
+                    ))}
+
+                    <div className="shopping-icons-bottom">
+                      <div className="d-flex justify-content-between shopping-icons-bottom-btn">
+                        <button>WIEV CARD</button>
+                        <button>CHECKOUT</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
               <li className="any-hover">
                 <a href="">

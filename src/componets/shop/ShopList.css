@@ -25,8 +25,16 @@
 
 .Shop-list-carts-left-bottom-img {
     width: 248px;
+    margin: 0 auto;
 }
-
+@media (max-width:548px) {
+    .Shop-list-carts-left-bottom-img {
+        width: 200px;
+    }
+    .Shop-list-carts-left-bottom-img button {
+        width: 200px !important;
+    }
+}
 .Shop-list-carts-left-bottom-img img {
     width: 100%;
 }
@@ -75,6 +83,7 @@
 }
 .shopping-icons-img img{
     width: 100%;
+    display: flex;
 }
 .shopping-icons-top-span span{
 font-weight: 700;
@@ -85,13 +94,12 @@ display: inline-block;
 }
 .shopping-icons{
     width: 280px;
-    height: 230px;
-    background-color: rgb(96, 124, 115);
-    padding: 15px 20px;
-    position: absolute;
-    top: 0;
-    right: 0;
+    background-color: rgb(255, 255, 255);
+    position: relative;
     margin-right: 50px;
+    padding: 15px 20px;
+    margin: 0 auto;
+    cursor: default;
 }
 .shopping-icons-bottom{
     border-top: 1px solid #ababab;
@@ -102,6 +110,8 @@ display: inline-block;
     color: #474747;
     font-size: 14px;
     font-weight: 700;
+}.shopping-icons-bottom-span{
+    padding-bottom: 20px;
 }
 .shopping-icons-bottom-span span{
     font-weight: 700;
@@ -119,8 +129,21 @@ display: inline-block;
     padding: 0;
     color: white;
     font-size: 14px;
+    transition: 0.5s ease all;
 }
-
+.shopping-icons-bottom-btn button:hover{
+    background-color: #474747;
+}
+.badge {
+    background-color: #2d76b2;
+    border-radius: 50%;
+    left: 10px;
+    bottom: 10px;
+    font-size: 8px;
+}
+.fa-circle-xmark{
+    cursor: pointer;
+}
 
 
 

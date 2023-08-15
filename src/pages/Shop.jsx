@@ -1,10 +1,10 @@
-import React from 'react'
-import ShopList from '../componets/shop/ShopList'
+import React from "react";
+import ShopList from "../componets/shop/ShopList";
 
 const Shop = () => {
   return (
-    <ShopList/>
-  )
-}
+      <ShopList />
+  );
+};
 
-export default Shop
+export default Shop;
