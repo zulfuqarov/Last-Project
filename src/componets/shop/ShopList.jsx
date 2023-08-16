@@ -9,8 +9,17 @@ import { useEffect, useState } from "react";
 const itemsPerPage = 9;
 
 const ShopList = () => {
+
+
   const context = useContext(BooksContext);
   const [currentPage, setCurrentPage] = useState(0);
+  const [filterValue, setFilterValue] = useState(50); // Başlangıçta 50 olarak ayarladık.
+  
+  // input change start
+  const inputPriceChange = (e) => {
+    setFilterValue(e.target.value);
+  };
+  // input change end
 
   const handlePageClick = (selectedPage) => {
     setCurrentPage(selectedPage.selected);
@@ -21,9 +30,16 @@ const ShopList = () => {
   const startIndex = currentPage * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
-  const visibleItems = context.state.bookList.slice(startIndex, endIndex);
+  const visibleItems = context.state.bookList
+    .slice(startIndex, endIndex)
+    .map((item) => ({
+      ...item,
+      qiymet: item.price,
+      filterPrice: item.qiymet <= 25 ? item.price : item.price,
+    }))
+    .filter((item) => item.qiymet < filterValue);
 
-  console.log(context);
+  
   return (
     <section className="Shop-List">
       <NavbarLinksAlllHeader span="Shop" links="shop" />
@@ -61,14 +77,71 @@ const ShopList = () => {
                     </div>
                     <div className="text-center Shop-list-carts-left-bottom-about">
                       <span>{book.name}</span>
-                      <p>${book.price}</p>
+                      <p>${book.filterPrice}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
             <div className="Shop-list-carts-right  col-12  col-xl-3">
-              <h1>Shop-list-carts-right </h1>
+              <h1>Filter </h1>
+              <div className="Shop-list-carts-right-top pt-3">
+                <input
+                  type="range"
+                  min={13}
+                  max={context.state.length}
+                  value={filterValue}
+                  onChange={inputPriceChange}
+                />
+                <h1>{filterValue}$</h1>
+              </div>
+              <h1 className="pt-5">Products</h1>
+              <div className="Shop-list-carts-right-center pt-5">
+                <div>
+                  <div>
+                    <img src='' alt="" />
+                  </div>
+                  <h1></h1>
+                  <i></i>
+                  <span></span>
+                </div>
+                <div>
+                  <div>
+                    <img src="" alt="" />
+                  </div>
+                  <h1></h1>
+                  <i></i>
+                  <span></span>
+                </div>
+                <div>
+                  <div>
+                    <img src="" alt="" />
+                  </div>
+                  <h1></h1>
+                  <i></i>
+                  <span></span>
+                </div>
+              </div>
+              <h1 className="pt-5">Categories</h1>
+              <div className="Shop-list-carts-right-bottom  pt-5">
+                <a href="#">Art & Design</a>
+                <a href="#">Business</a>
+                <a href="#">Development</a>
+                <a href="#">It & Software</a>
+                <a href="#">Languages</a>
+                <a href="#">Uncategorized</a>
+              </div>
+              <h1 className="pt-5">Tags</h1>
+              <div className="Shop-list-carts-right-tags pt-5">
+                <a href="#">ART</a>
+                <a href="#">BOOKS</a>
+                <a href="#">COLLEGE</a>
+                <a href="#">DESIGN</a> <br />
+                <a href="#">EVENT</a>
+                <a href="#">INTERVIEW</a>
+                <a href="#">MUSIC</a> <br />
+                <a href="#">SCIENCE</a>
+              </div>
             </div>
           </div>
         </div>

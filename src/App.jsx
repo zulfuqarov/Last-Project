@@ -58,9 +58,10 @@ function App() {
       cart: state.cart.filter((cartItem) => cartItem.id !== id),
       totalcount: state.totalcount - counts,
     });
+
   return (
     <>
-      <BooksContext.Provider value={{ state: state, AddToCartd, RemoveCartd }}>
+      <BooksContext.Provider value={{ state: state, AddToCartd, RemoveCartd}}>
         <BrowserRouter>
           <Navbar />
           <Routes>

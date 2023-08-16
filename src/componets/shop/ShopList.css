@@ -144,6 +144,53 @@ display: inline-block;
 .fa-circle-xmark{
     cursor: pointer;
 }
+.Shop-list-carts-right-top input{
+margin: 20px 0;
+}
+.Shop-list-carts-right > h1{
+    font-size: 24px;
+    color: #2c2c2c;
+    font-weight: 500;
+}
+.Shop-list-carts-right-top  h1{
+    display: inline-block;
+    padding-left: 30px;
+    font-size: 18px;
+    color: #474747;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Shop-list-carts-right-bottom a{
+    font-size: 16px;
+    display: block;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-weight: 500;
+    border-bottom: 1px solid #ababab;
+    color: #0a0a0a;
+}
+.Shop-list-carts-right-tags a{
+    color: #0a0a0a;
+    font-size: 13px;
+    display: inline-block;
+    font-weight: 500;
+    padding: 7px;
+}
+
 
 
 
