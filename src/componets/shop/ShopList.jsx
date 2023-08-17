@@ -9,12 +9,10 @@ import { useEffect, useState } from "react";
 const itemsPerPage = 9;
 
 const ShopList = () => {
-
-
   const context = useContext(BooksContext);
   const [currentPage, setCurrentPage] = useState(0);
   const [filterValue, setFilterValue] = useState(50); // Başlangıçta 50 olarak ayarladık.
-  
+
   // input change start
   const inputPriceChange = (e) => {
     setFilterValue(e.target.value);
@@ -39,7 +37,6 @@ const ShopList = () => {
     }))
     .filter((item) => item.qiymet < filterValue);
 
-  
   return (
     <section className="Shop-List">
       <NavbarLinksAlllHeader span="Shop" links="shop" />
@@ -97,30 +94,25 @@ const ShopList = () => {
               </div>
               <h1 className="pt-5">Products</h1>
               <div className="Shop-list-carts-right-center pt-5">
-                <div>
+                {context.booksShopping.slice(0, 3).map((book) => (
                   <div>
-                    <img src='' alt="" />
+                    <div className="Shop-list-carts-right-center-product">
+                      <div className="Shop-list-carts-right-center-product-img">
+                        <img src={book.img} alt="" />
+                      </div>
+                      <div className="Shop-list-carts-right-center-product-about">
+                        <h1>{book.name}</h1>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <span>${book.price}</span>
+                      </div>
+                    </div>
                   </div>
-                  <h1></h1>
-                  <i></i>
-                  <span></span>
-                </div>
-                <div>
-                  <div>
-                    <img src="" alt="" />
-                  </div>
-                  <h1></h1>
-                  <i></i>
-                  <span></span>
-                </div>
-                <div>
-                  <div>
-                    <img src="" alt="" />
-                  </div>
-                  <h1></h1>
-                  <i></i>
-                  <span></span>
-                </div>
+                ))}
               </div>
               <h1 className="pt-5">Categories</h1>
               <div className="Shop-list-carts-right-bottom  pt-5">

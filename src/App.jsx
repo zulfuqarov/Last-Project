@@ -61,7 +61,7 @@ function App() {
 
   return (
     <>
-      <BooksContext.Provider value={{ state: state, AddToCartd, RemoveCartd}}>
+      <BooksContext.Provider value={{ state: state, AddToCartd, RemoveCartd, booksShopping}}>
         <BrowserRouter>
           <Navbar />
           <Routes>
