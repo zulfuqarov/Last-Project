@@ -306,7 +306,7 @@ const Navbar = () => {
                     <Link to="/Shop-List">Shop Lsit</Link>
                   </li>
                   <li>
-                    <a href="">Product Single</a>
+                    <Link to="/Product-single">Product Single</Link>
                   </li>
                   <li className="Layouts-hover">
                     <a href="">Layouts</a>{" "}
@@ -476,7 +476,7 @@ const Navbar = () => {
                         <button>CHECKOUT</button>
                       </div>
                       <h1 className="pt-4 text-start text-uppercase fs-9">
-                        all total price books:  {totalPriceBooks} $
+                        all total price books: {totalPriceBooks} $
                       </h1>
                     </div>
                   </div>

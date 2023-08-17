@@ -12,6 +12,7 @@ import { BrowserRouter } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import React, { createContext } from "react";
+import ShopProc from "./pages/ShopProc";
 
 export const BooksContext = createContext();
 
@@ -68,6 +69,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/Teachers" element={<Pagesteacher />} />
             <Route path="Shop-List" element={<Shop />} />
+            <Route path="Product-single" element={<ShopProc/>}/>
           </Routes>
           <Footer />
         </BrowserRouter>
