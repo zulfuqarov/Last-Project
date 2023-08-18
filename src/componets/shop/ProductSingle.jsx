@@ -39,9 +39,15 @@ const ProductSingle = () => {
                 <p>Category: Business</p>
                 <p>Tags: Art, Design, Interview</p>
                 <div className="Product-Singl-carts-right-counter">
-                    <h1>0</h1>
-                    <p>+</p>
+                    <h1>{context.state.totalcount}</h1>
+                    <div className="Product-Singl-carts-right-counter-p ">
+                    <p>+</p> 
                     <p>-</p>
+                    </div>
+                    <div className="Product-Singl-carts-right-counter-button">
+                      <button
+                      onClick={() => context.AddToCartd(book)}>add to cartd</button>
+                    </div>
                 </div>
               </div>
             ))}
