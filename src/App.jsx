@@ -60,9 +60,36 @@ function App() {
       totalcount: state.totalcount - counts,
     });
 
+    const Upcount= (book) =>
+    setstate({
+      ...state,
+      cart: state.cart.find((cartItem) => cartItem.id === book.id)
+        ? state.cart.map((cartItem) =>
+            cartItem.id === book.id
+              ? { ...cartItem, counts: cartItem.counts + 1 }
+              : cartItem
+          )
+        : [...state.cart, { ...book, counts: 1 }],
+      totalcount: state.totalcount + 1,
+    });
+
+    
+    const Downcount= (book) =>
+    setstate({
+      ...state,
+      cart: state.cart.find((cartItem) => cartItem.id === book.id)
+        ? state.cart.map((cartItem) =>
+            cartItem.id === book.id
+              ? { ...cartItem, counts: Math.max(cartItem.counts - 1, 0) }
+              : cartItem
+          )
+        : [...state.cart, { ...book, counts: 1 }],
+      totalcount: Math.max(state.totalcount - 1,0),
+    });
+  
   return (
     <>
-      <BooksContext.Provider value={{ state: state, AddToCartd, RemoveCartd, booksShopping}}>
+      <BooksContext.Provider value={{ state: state, AddToCartd, RemoveCartd,Upcount,Downcount, booksShopping}}>
         <BrowserRouter>
           <Navbar />
           <Routes>

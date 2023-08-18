@@ -73,6 +73,19 @@
 .Product-Singl-carts-right-counter-button button:hover{
      background-color: #434343;
 }
-
+.Product-Singl-btn{
+    display: flex;
+   justify-content: right;
+   padding-top: 30px;
+}
+.Product-Singl-btn button{
+    width: 230px;
+    height: 50px;
+    border: 1px solid #b6b6b6;
+    padding: 0;
+    color: #434343;
+    font-size: 14px;
+    background-color: transparent;
+}
 
 
