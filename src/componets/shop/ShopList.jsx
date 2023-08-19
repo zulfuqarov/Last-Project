@@ -5,6 +5,7 @@ import { BooksContext } from "../../App";
 import { useContext } from "react";
 import ReactPaginate from "react-paginate";
 import { useEffect, useState } from "react";
+import ShopListCarts from "./shopcartsprops/ShopListCarts";
 
 const itemsPerPage = 9;
 
@@ -63,20 +64,7 @@ const ShopList = () => {
               </div>
               <div className="row">
                 {visibleItems.map((book) => (
-                  <div className="Shop-list-carts-left-bottom col col-md col-lg-4">
-                    <div className="Shop-list-carts-left-bottom-img">
-                      <img src={book.img} alt="" />
-                      <div className="position-absolute">
-                        <button onClick={() => context.AddToCartd(book)}>
-                          ADD TO CART
-                        </button>
-                      </div>
-                    </div>
-                    <div className="text-center Shop-list-carts-left-bottom-about">
-                      <span>{book.name}</span>
-                      <p>${book.filterPrice}</p>
-                    </div>
-                  </div>
+                  <ShopListCarts AddToCartd={() => context.AddToCartd(book)} BookImg={book.img} BookName={book.name} BookFilterPrice={book.filterPrice} />
                 ))}
               </div>
             </div>
