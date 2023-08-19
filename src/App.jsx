@@ -13,6 +13,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import React, { createContext } from "react";
 import ShopProc from "./pages/ShopProc";
+import ThreeColumnGrid from "./componets/shop/Layouts/ThreeColumnGrid";
 
 export const BooksContext = createContext();
 
@@ -97,6 +98,7 @@ function App() {
             <Route path="/Teachers" element={<Pagesteacher />} />
             <Route path="Shop-List" element={<Shop />} />
             <Route path="Product-single" element={<ShopProc/>}/>
+            <Route path="Three-Column-Grid" element={<ThreeColumnGrid/>}/>
           </Routes>
           <Footer />
         </BrowserRouter>

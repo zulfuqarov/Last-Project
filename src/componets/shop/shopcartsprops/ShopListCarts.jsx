@@ -1,7 +1,6 @@
 import React from "react";
 
-const ShopListCarts = ({BookImg,BookName,BookFilterPrice,AddToCartd}) => {
-   
+const ShopListCarts = ({ BookImg, BookName, BookFilterPrice, AddToCartd }) => {
   return (
     <div className="Shop-list-carts-left-bottom col col-md col-lg-4">
       <div className="Shop-list-carts-left-bottom-img">

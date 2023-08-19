@@ -313,7 +313,7 @@ const Navbar = () => {
                     <i className="fa-solid fa-angle-right"></i>
                     <ul className="Layouts-bottom">
                       <li>
-                        <a href="">Three Column Grid</a>
+                        <Link to="Three-Column-Grid">Three Column Grid</Link>
                       </li>
                       <li>
                         <a href="">Four Column Grid</a>
