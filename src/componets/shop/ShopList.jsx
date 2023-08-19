@@ -40,7 +40,7 @@ const ShopList = () => {
 
   return (
     <section className="Shop-List">
-      <NavbarLinksAlllHeader span="Shop" links="shop" />
+      <NavbarLinksAlllHeader ClassNameProps="Teacher-back-fon d-flex position-relative" span="Shop" links="shop" />
       <section className="Shop-list-carts">
         <div className="container">
           <div className="row">

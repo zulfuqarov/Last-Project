@@ -34,7 +34,7 @@ const Teacher = () => {
 
   return ( 
     <section className="Teacher">
-      <NavbarLinksAlllHeader links='Our Teachers' span='Our Teachers'/>
+      <NavbarLinksAlllHeader ClassNameProps="Teacher-back-fon d-flex position-relative" links='Our Teachers' span='Our Teachers'/>
       <div className="container">
         <section className="section-joseph row">
           <div className="joseph-img-left col-12 col-lg-6">

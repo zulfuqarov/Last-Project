@@ -10,6 +10,7 @@ const ThreeColumnGrid = () => {
   return (
     <section className="ThreeColumnGrid">
       <NavbarLinksAlllHeader
+        ClassNameProps="Teacher-back-fon d-flex position-relative"
         span="Three Column Grid"
         links="Home / Three Column Grid"
       />

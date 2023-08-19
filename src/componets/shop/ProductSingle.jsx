@@ -34,6 +34,7 @@ const ProductSingle = () => {
   return (
     <div className="Product-Single">
       <NavbarLinksAlllHeader
+        ClassNameProps="Teacher-back-fon d-flex position-relative"
         span="Shop"
         links="Home  /  Shop  /  Business  /  Art Of Seo"
       />
