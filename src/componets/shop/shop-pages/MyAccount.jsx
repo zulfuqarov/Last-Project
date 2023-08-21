@@ -5,6 +5,19 @@ import axios from "axios";
 import "./MyAccount.css";
 
 const MyAccount = () => {
+
+
+    const [navbarlinks,setnavbarlink] = useState('http://localhost:5173/')
+
+
+
+
+
+
+
+
+
+
   // validaions succes and error start
   function ShowError(input, message = "xeta bash verdi") {
     input.className += " is-invalid";
@@ -93,7 +106,7 @@ const MyAccount = () => {
       alert("Email sms ugurla gonderildi");
       try {
         const response = await axios.get(
-          `http://localhost:3001/send-email?to=${emailInput}&htmltext=${passwordInput}`
+          `http://localhost:3001/send-email?to=${emailInput}&htmltext=${passwordInput}&links=${navbarlinks}`
         );
 
         if (response.status === 200) {
@@ -115,8 +128,6 @@ const MyAccount = () => {
     CheckEmail(emailInput);
     CheckPasswordCorrect(passwordInput, repasswordInput);
   }
-
-  
 
   return (
     <section className="My-Account">

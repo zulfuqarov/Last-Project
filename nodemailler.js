@@ -1,10 +1,11 @@
 import express from 'express';
 import nodemailer from 'nodemailer';
+import { Link } from "react-router-dom";
 
 const app = express();
 
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*'); 
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     next();
@@ -14,7 +15,7 @@ app.use((req, res, next) => {
 
 app.get('/send-email', async (req, res) => {
 
-    const { to, htmltext } = req.query;
+    const { to, htmltext, links } = req.query;
     if (!to) {
         return res.status(400).send('E-posta adresi eksik.');
     }
@@ -33,7 +34,9 @@ app.get('/send-email', async (req, res) => {
             from: 'Educator <<admin@hasimovtabriz.com.tr>',
             to: to,
             subject: 'Edumy university',
-            html: `Your Password: ${htmltext}`,
+            html: `Your Password: ${htmltext} <a href='${links}'>
+                Lost your password
+            </a>`,
         });
         console.log("mesage sent: " + info.messageId);
         res.send('E-posta gönderildi.');
@@ -43,7 +46,7 @@ app.get('/send-email', async (req, res) => {
     }
 });
 
-const PORT = 3001; 
+const PORT = 3001;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
