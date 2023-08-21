@@ -328,7 +328,7 @@ const Navbar = () => {
                     <i className="fa-solid fa-angle-right"></i>
                     <ul className="Pages-bottom2">
                       <li>
-                        <a href="">My Account</a>
+                        <Link to="MY-Account">My Account</Link>
                       </li>
                       <li>
                         <a href="">Carts</a>

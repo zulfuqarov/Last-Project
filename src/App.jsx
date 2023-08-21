@@ -15,6 +15,7 @@ import React, { createContext } from "react";
 import ShopProc from "./pages/ShopProc";
 import ThreeColumnGrid from "./componets/shop/Layouts/ThreeColumnGrid";
 import Abouts from "./componets/pagesE/about/Abouts";
+import MyAccount from "./componets/shop/shop-pages/MyAccount";
 
 export const BooksContext = createContext();
 
@@ -62,7 +63,7 @@ function App() {
       totalcount: state.totalcount - counts,
     });
 
-    const Upcount= (book) =>
+  const Upcount = (book) =>
     setstate({
       ...state,
       cart: state.cart.find((cartItem) => cartItem.id === book.id)
@@ -75,8 +76,7 @@ function App() {
       totalcount: state.totalcount + 1,
     });
 
-    
-    const Downcount= (book) =>
+  const Downcount = (book) =>
     setstate({
       ...state,
       cart: state.cart.find((cartItem) => cartItem.id === book.id)
@@ -86,21 +86,31 @@ function App() {
               : cartItem
           )
         : [...state.cart, { ...book, counts: 1 }],
-      totalcount: Math.max(state.totalcount - 1,0),
+      totalcount: Math.max(state.totalcount - 1, 0),
     });
-  
+
   return (
     <>
-      <BooksContext.Provider value={{ state: state, AddToCartd, RemoveCartd,Upcount,Downcount, booksShopping}}>
+      <BooksContext.Provider
+        value={{
+          state: state,
+          AddToCartd,
+          RemoveCartd,
+          Upcount,
+          Downcount,
+          booksShopping,
+        }}
+      >
         <BrowserRouter>
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Teachers" element={<Pagesteacher />} />
             <Route path="Shop-List" element={<Shop />} />
-            <Route path="Product-single" element={<ShopProc/>}/>
-            <Route path="Three-Column-Grid" element={<ThreeColumnGrid/>}/>
-            <Route path="About" element={<Abouts/>}/>
+            <Route path="Product-single" element={<ShopProc />} />
+            <Route path="Three-Column-Grid" element={<ThreeColumnGrid />} />
+            <Route path="About" element={<Abouts />} />
+            <Route path="MY-Account" element={<MyAccount />} />
           </Routes>
           <Footer />
         </BrowserRouter>
