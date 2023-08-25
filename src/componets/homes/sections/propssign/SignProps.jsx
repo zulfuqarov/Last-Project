@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import axios from "axios";
+
 const SignProps = () => {
+
   // validaions succes and error start
   function ShowError(input, message = "xeta bash verdi") {
     input.className += " is-invalid";
@@ -98,11 +101,10 @@ const SignProps = () => {
         ShowError(birInput, "The field is required.");
       }
     });
-
   }
 
   // submit confirm start
-  function handleFormSubmit(e) {
+  async function handleFormSubmit(e) {
     e.preventDefault();
 
     const inputlar = [
@@ -112,34 +114,46 @@ const SignProps = () => {
       document.getElementById("repassword"),
     ];
     const isAnyInvalid = inputlar.every((input) =>
-    input.classList.contains("is-valid")
-  );
+      input.classList.contains("is-valid")
+    );
 
-  if (isAnyInvalid) { 
-    alert("Email sms ugurla gonderildi");
-    return;
-  }
-  else if (!isAnyInvalid){
-   alert("xahis edilir duzgun daxil olasiz");
-  }
-  
-  
+    if (isAnyInvalid) {
+      alert("Email sms ugurla gonderildi");
+      try {
+        const response = await axios.get(
+          `http://localhost:3002/send-email?to=${emailInput}&Name=${nameInput}`
+        );
+
+        if (response.status === 200) {
+          console.log("E-posta gönderildi.");
+        } else {
+          console.log("E-posta gönderilemedi.");
+        }
+      } catch (error) {
+        console.error("Bir hata oluştu:", error);
+      }
+
+      const dataUserName = JSON.parse(localStorage.getItem("userName")) || [];
+      const dataEmail = JSON.parse(localStorage.getItem("E-mail")) || [];
+      const dataPassword = JSON.parse(localStorage.getItem("password")) || [];
+
+      dataUserName.push(nameInput);
+      dataEmail.push(emailInput);
+      dataPassword.push(passwordInput);
+
+      localStorage.setItem("userName", JSON.stringify(dataUserName));
+      localStorage.setItem("E-mail", JSON.stringify(dataEmail));
+      localStorage.setItem("password", JSON.stringify(dataPassword));
+
+      return;
+    } else if (!isAnyInvalid) {
+      alert("xahis edilir duzgun daxil olasiz");
+    }
     CheckRequired(inputlar);
     CheckLength(nameInput);
     CheckEmail(emailInput);
     CheckPasswordCorrect(passwordInput, repasswordInput);
- 
-    
- 
-   
-
-   
-
-
-    
-  
   }
-
   // submit confirm end
   return (
     <form id="form" className="sign-Form-div">

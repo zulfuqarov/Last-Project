@@ -1,22 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavbarLinksAlllHeader from "../../navbar-all-links-header/NavbarLinksAlllHeader";
 import axios from "axios";
-
 import "./MyAccount.css";
+import { Link } from "react-router-dom";
 
 const MyAccount = () => {
-
-
-    const [navbarlinks,setnavbarlink] = useState('http://localhost:5173/')
-
-
-
-
-
-
-
-
-
+ 
 
   // validaions succes and error start
   function ShowError(input, message = "xeta bash verdi") {
@@ -55,31 +44,23 @@ const MyAccount = () => {
   // email validation end
 
   const [passwordInput, setPasswordInput] = useState("");
-  const [repasswordInput, setRepasswordInput] = useState("");
+
   const [passwordError, setPasswordError] = useState("");
 
-  function CheckPasswordCorrect(password1, repassword2) {
-    if (password1 === repassword2) {
+  function CheckPasswordCorrect(password1) {
+    if (password1) {
       setPasswordError("");
       ShowSucces(passwordInput);
-      ShowSucces(repasswordInput);
     } else {
       setPasswordError("Passwords do not match");
-      ShowError(repasswordInput, "Passwords do not match");
+      ShowError(passwordInput, "Passwords do not match");
     }
   }
   const handlePasswordChange = (e) => {
     const newPassword = e.target.value;
     setPasswordInput(newPassword);
-    CheckPasswordCorrect(newPassword, repasswordInput);
+    CheckPasswordCorrect(newPassword);
   };
-
-  const handleRepasswordChange = (e) => {
-    const newRepassword = e.target.value;
-    setRepasswordInput(newRepassword);
-    CheckPasswordCorrect(passwordInput, newRepassword);
-  };
-  // password validaion end
 
   function CheckRequired(inputlar) {
     inputlar.forEach(function (birInput) {
@@ -89,6 +70,14 @@ const MyAccount = () => {
     });
   }
 
+  // loacl storage start
+  const SignLocalEmail = localStorage.getItem("E-mail");
+  const SignLocalpassword = localStorage.getItem("password");
+  const SignLocalEmailParse = JSON.parse(SignLocalEmail) || [];
+  const SignLocalpasswordParse = JSON.parse(SignLocalpassword) || [];
+
+  // loacl storage end
+
   // submit confirm start
   async function handleFormSubmit(e) {
     e.preventDefault();
@@ -96,37 +85,42 @@ const MyAccount = () => {
     const inputlar = [
       document.getElementById("email"),
       document.getElementById("password"),
-      document.getElementById("repassword"),
     ];
     const isAnyInvalid = inputlar.every((input) =>
       input.classList.contains("is-valid")
     );
 
     if (isAnyInvalid) {
-      alert("Email sms ugurla gonderildi");
-      try {
-        const response = await axios.get(
-          `http://localhost:3001/send-email?to=${emailInput}&htmltext=${passwordInput}&links=${navbarlinks}`
-        );
+      if (
+        SignLocalEmailParse.includes(emailInput) &&
+        SignLocalpasswordParse.includes(passwordInput)
+      ) {
+        alert("girish ugurla tamamlandi email sms gonderildi");
+        try {
+          const response = await axios.get(
+            `http://localhost:3001/send-email?to=${emailInput}`
+          );
 
-        if (response.status === 200) {
-          console.log("E-posta gönderildi.");
-          // Burada e-posta gönderildiğine dair bir bildirim veya görsel geri bildirim sağlayabilirsiniz.
-        } else {
-          console.log("E-posta gönderilemedi.");
+          if (response.status === 200) {
+            console.log("E-posta gönderildi.");
+          } else {
+            console.log("E-posta gönderilemedi.");
+          }
+        } catch (error) {
+          console.error("Bir hata oluştu:", error);
         }
-      } catch (error) {
-        console.error("Bir hata oluştu:", error);
+      } else {
+        alert("email,password or wrong");
       }
+
       return;
     } else if (!isAnyInvalid) {
       alert("xahis edilir duzgun daxil olasiz");
     }
 
     CheckRequired(inputlar);
-    CheckLength(nameInput);
     CheckEmail(emailInput);
-    CheckPasswordCorrect(passwordInput, repasswordInput);
+    CheckPasswordCorrect(passwordInput);
   }
 
   return (
@@ -169,25 +163,9 @@ const MyAccount = () => {
               value={passwordInput}
               onChange={handlePasswordChange}
             />
+            <div className="invalid-feedback">{passwordError}</div>
           </div>
-          <div class="form-group pb-5">
-            <label className="pb-2" htmlFor="">
-              Repassword *
-            </label>
-            <input
-              placeholder="Enter repassword"
-              type="password"
-              className={`form-control ${
-                passwordError ? "is-invalid" : repasswordInput ? "is-valid" : ""
-              }`}
-              id="repassword"
-              value={repasswordInput}
-              onChange={handleRepasswordChange}
-            />
-            <div className={passwordError ? "invalid-feedback" : ""}>
-              {passwordError}
-            </div>
-          </div>
+
           <div className="Section-Login-remember">
             <input type="checkbox" />
             <span className="pe-3 ps-3">Remember me</span>
@@ -198,9 +176,12 @@ const MyAccount = () => {
             >
               LOGIN IN
             </button>
-            <a className="d-block" href="">
+            {/* <a className="d-block pb-4" href="">
               Lost your password
-            </a>
+            </a> */}
+            <Link to="/Change-Password" className="d-block pb-4">Lost your password</Link>
+
+            <Link to="/Sign">Sign</Link>
           </div>
         </form>
       </section>

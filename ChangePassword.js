@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 
 app.get('/send-email', async (req, res) => {
 
-    const { to } = req.query;
+    const { to, ChangepaaswordLinks } = req.query;
     if (!to) {
         return res.status(400).send('E-posta adresi eksik.');
     }
@@ -34,7 +34,7 @@ app.get('/send-email', async (req, res) => {
             from: 'Educator <<admin@hasimovtabriz.com.tr>',
             to: to,
             subject: 'Educator university',
-            html: `Your login is successful`,
+            html: `yor change password links <a href="${ChangepaaswordLinks}">Change password</a>`,
         });
         console.log("mesage sent: " + info.messageId);
         res.send('E-posta gönderildi.');
@@ -44,7 +44,7 @@ app.get('/send-email', async (req, res) => {
     }
 });
 
-const PORT = 3001;
+const PORT = 3003;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
