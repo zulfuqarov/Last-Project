@@ -19,6 +19,7 @@ import MyAccount from "./componets/shop/shop-pages/MyAccount";
 import Register from "./componets/register/Register";
 import LostPassword from "./componets/Fixpassword/LostPassword";
 import ConfirmPassword from "./componets/Fixpassword/Changepassword";
+import Checkout from "./componets/shop/shop-pages/Checkout";
 
 export const BooksContext = createContext();
 
@@ -117,6 +118,7 @@ function App() {
             <Route path="/Sign" element={<Register />} />
             <Route path="/Change-Password" element={<LostPassword />} />
             <Route path="/Confirm-Password" element={<ConfirmPassword />} />
+            <Route path="/Checkout" element={<Checkout />} />
           </Routes>
           <Footer />
         </BrowserRouter>

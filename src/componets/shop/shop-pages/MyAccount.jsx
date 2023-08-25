@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import NavbarLinksAlllHeader from "../../navbar-all-links-header/NavbarLinksAlllHeader";
 import axios from "axios";
 import "./MyAccount.css";
@@ -176,9 +176,7 @@ const MyAccount = () => {
             >
               LOGIN IN
             </button>
-            {/* <a className="d-block pb-4" href="">
-              Lost your password
-            </a> */}
+
             <Link to="/Change-Password" className="d-block pb-4">Lost your password</Link>
 
             <Link to="/Sign">Sign</Link>

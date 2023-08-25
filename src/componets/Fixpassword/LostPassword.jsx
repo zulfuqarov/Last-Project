@@ -3,7 +3,9 @@ import NavbarLinksAlllHeader from "../navbar-all-links-header/NavbarLinksAlllHea
 import axios from "axios";
 
 const LostPassword = () => {
-  const [ChanhepasswordsLinks, setChanhepasswordsLinks] = useState("http://localhost:5173/Confirm-Password");
+  const [ChanhepasswordsLinks, setChanhepasswordsLinks] = useState(
+    "http://localhost:5173/Confirm-Password"
+  );
 
   function ShowSucces(input) {
     input.className = "form-control is-valid";
@@ -55,7 +57,7 @@ const LostPassword = () => {
 
     if (isAnyInvalid) {
       if (SignLocalEmail.includes(emailInput)) {
-        alert("girish ugurla tamamlandi email sms gonderildi");
+        alert("Check email for change your password");
         try {
           const response = await axios.get(
             `http://localhost:3003/send-email?to=${emailInput}&ChangepaaswordLinks=${ChanhepasswordsLinks}`
@@ -93,7 +95,7 @@ const LostPassword = () => {
       <section className="Section-Login container">
         <form id="form" className="sign-Form-div">
           <div class="form-group">
-            <label  htmlFor="">Enter your email</label>
+            <label htmlFor="">Enter your email</label>
             <input
               placeholder="Enter email"
               type="email"

@@ -334,7 +334,7 @@ const Navbar = () => {
                         <a href="">Carts</a>
                       </li>
                       <li>
-                        <a href="">Checkout</a>
+                        <Link to="/Checkout">Checkout</Link>
                       </li>
                     </ul>
                   </li>

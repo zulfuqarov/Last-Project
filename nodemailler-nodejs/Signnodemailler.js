@@ -35,7 +35,7 @@ app.get('/send-email', async (req, res) => {
             to: to,
             subject: 'Educator university',
             html: `sign successful with: ${to} 
-            Mr:<h2>${Name}:</h3> 
+            Mr:<h2 style="display: inline-block;">${Name}:</h3> 
             <h2>Welcome to Educator </h2>
             `
         });

@@ -1,0 +1,36 @@
+.Cheackout-section {
+    padding-top: 85px;
+}
+.Cheackout-accardion1{
+    padding-top: 70px;
+}
+.Cheackout-top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #acacac;
+    color: #acacac;
+}
+
+.Cheackout-top a {
+    color: rgb(54, 54, 54);
+}
+
+.Cheackout-bottom {
+    height: 0px;
+    overflow-y: hidden;
+    transition: height ease 0.5s;
+    padding-top: 30px;
+}
+.Cheackout-bottom span{
+    color: #acacac;
+}
+.Cheackout-bottom-active {
+    height: 460px;
+    overflow-y: none;
+    transition: height ease 0.5s;
+}.Cheackout-bottom-active2{
+    height: 130px;
+    overflow-y: none;
+    transition: height ease 0.5s;
+}
