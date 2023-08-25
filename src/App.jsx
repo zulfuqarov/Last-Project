@@ -18,6 +18,7 @@ import Abouts from "./componets/pagesE/about/Abouts";
 import MyAccount from "./componets/shop/shop-pages/MyAccount";
 import Register from "./componets/register/Register";
 import LostPassword from "./componets/Fixpassword/LostPassword";
+import ConfirmPassword from "./componets/Fixpassword/Changepassword";
 
 export const BooksContext = createContext();
 
@@ -113,9 +114,10 @@ function App() {
             <Route path="Three-Column-Grid" element={<ThreeColumnGrid />} />
             <Route path="About" element={<Abouts />} />
             <Route path="MY-Account" element={<MyAccount />} />
-            <Route path="/Sign" element={<Register/>}/>
-            <Route path="/Change-Password" element={<LostPassword/>} />
-          </Routes> 
+            <Route path="/Sign" element={<Register />} />
+            <Route path="/Change-Password" element={<LostPassword />} />
+            <Route path="/Confirm-Password" element={<ConfirmPassword />} />
+          </Routes>
           <Footer />
         </BrowserRouter>
       </BooksContext.Provider>

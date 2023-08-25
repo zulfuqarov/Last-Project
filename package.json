@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "nodemailler.js,Signnodemailler.js,ChangePassword.js",
+  "main": "nodemailler.js,Signnodemailler.js,ChangePassword.js,SendPassword.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -3,7 +3,7 @@ import NavbarLinksAlllHeader from "../navbar-all-links-header/NavbarLinksAlllHea
 import axios from "axios";
 
 const LostPassword = () => {
-  const [navbarlinks, setnavbarlink] = useState("http://localhost:5173/");
+  const [ChanhepasswordsLinks, setChanhepasswordsLinks] = useState("http://localhost:5173/Confirm-Password");
 
   function ShowSucces(input) {
     input.className = "form-control is-valid";
@@ -58,7 +58,7 @@ const LostPassword = () => {
         alert("girish ugurla tamamlandi email sms gonderildi");
         try {
           const response = await axios.get(
-            `http://localhost:3003/send-email?to=${emailInput}&ChangepaaswordLinks=${navbarlinks}`
+            `http://localhost:3003/send-email?to=${emailInput}&ChangepaaswordLinks=${ChanhepasswordsLinks}`
           );
 
           if (response.status === 200) {
@@ -93,12 +93,13 @@ const LostPassword = () => {
       <section className="Section-Login container">
         <form id="form" className="sign-Form-div">
           <div class="form-group">
+            <label  htmlFor="">Enter your email</label>
             <input
               placeholder="Enter email"
               type="email"
               className={`form-control ${
                 emailError ? "is-invalid" : emailInput ? "is-valid" : ""
-              }`}
+              } mb-4 mt-4`}
               id="email"
               value={emailInput}
               onChange={handleEmailChange}

@@ -1,7 +1,12 @@
-.Register-section{
+.Register-section {
     padding-top: 85px;
     height: 600px;
 }
-.change-pass-sections{
+
+.change-pass-sections {
+    padding-top: 85px;
+}
+
+.Confirm-password {
     padding-top: 85px;
 }
