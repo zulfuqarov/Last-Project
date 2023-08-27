@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import "./Checkout.css";
 import NavbarLinksAlllHeader from "../../navbar-all-links-header/NavbarLinksAlllHeader";
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { BooksContext } from "../../../App";
 
 const Checkout = () => {
+  // usecontext start
+  const context = useContext(BooksContext);
+  // usecontext end
+
+  const totalPriceBooks = context.state.cart
+    .reduce((total, book) => (total = total + book.price * book.counts), 0)
+    .toFixed(2);
   // accardions start
   const [Checkout, setCheckout] = useState(false);
 
@@ -55,7 +63,29 @@ const Checkout = () => {
     CheckEmail(newEmail);
   };
   // email validation end
+  // name validation start
+  const [nameInput, setnameInput] = useState("");
+  const [nameError, setnameError] = useState("");
 
+  function CheckLength(name) {
+    if (name.length < 4) {
+      setnameError(" MUST BE FROM AT LEAST 4 LETTERS");
+      ShowError(nameInput, "NAME MUST BE FROM AT LEAST 4 LETTERS");
+    } else if (name.length >= 20) {
+      setnameError("name cannot be greater than 20 letters");
+      ShowError(nameInput, "name cannot be greater than 20 letters");
+    } else {
+      setnameError("");
+      ShowSucces(nameInput);
+    }
+  }
+
+  const handleNameChange = (e) => {
+    const newName = e.target.value;
+    setnameInput(newName);
+    CheckLength(newName);
+  };
+  // name validation end
   const [passwordInput, setPasswordInput] = useState("");
 
   const [passwordError, setPasswordError] = useState("");
@@ -96,6 +126,7 @@ const Checkout = () => {
     e.preventDefault();
 
     const inputlar = [
+      document.getElementById("username"),
       document.getElementById("email"),
       document.getElementById("password"),
     ];
@@ -132,10 +163,27 @@ const Checkout = () => {
     }
 
     CheckRequired(inputlar);
+    CheckLength(nameInput);
     CheckEmail(emailInput);
     CheckPasswordCorrect(passwordInput);
   }
+  // submit confirm end
 
+  // company data start
+  const [SeatchCompany, setSearchCompany] = useState("");
+  const SearchCopmany = (e) => {
+    setSearchCompany(e.target.value);
+  };
+  const [company, setcompany] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/Company")
+      .then((response) => setcompany(response.data))
+      .catch((error) => {
+        console.error("api isdeyi basarisiz", error);
+      });
+  }, []);
+  // copany data end
   return (
     <section className="Cheackout-section">
       <NavbarLinksAlllHeader
@@ -253,45 +301,176 @@ const Checkout = () => {
 
         <section className="Cheackout-section-center row">
           <div className="Cheackout-section-left col-12 col-md-6">
-            <h1>Billing details</h1>
-            <div>
-              {/* <div className="form-group pb-4">
-                <label className="pb-2" htmlFor="">
-                  If you have a coupon code, please apply it bellow.
+            <h1 className="pb-5">Billing details</h1>
+            <div className="d-flex justify-content-between">
+              <div className="form-group pb-4  w-50">
+                <label className="pb-2 " htmlFor="">
+                  First Name
                 </label>
                 <input
-                  placeholder="Coupon code"
+                  placeholder="First Name"
                   type="text"
                   className={`form-control ${
-                    emailError ? "is-invalid" : emailInput ? "is-valid" : ""
+                    nameError ? "is-invalid" : nameInput ? "is-valid" : ""
                   }`}
-                  id="email"
-                  value={emailInput}
-                  onChange={handleEmailChange}
+                  id="username"
+                  value={nameInput}
+                  onChange={handleNameChange}
                 />
-                <div className="invalid-feedback">{emailError}</div>
+                <div className="invalid-feedback">{nameError}</div>
               </div>
-              <div className="form-group pb-4">
-                <label className="pb-2" htmlFor="">
-                  If you have a coupon code, please apply it bellow.
+              <div className="form-group  pb-4 w-50">
+                <label className="pb-2 " htmlFor="">
+                  Last name *
                 </label>
                 <input
-                  placeholder="Coupon code"
+                  placeholder="Last name *
+                  "
                   type="text"
                   className={`form-control ${
-                    emailError ? "is-invalid" : emailInput ? "is-valid" : ""
+                    nameError ? "is-invalid" : nameInput ? "is-valid" : ""
                   }`}
-                  id="email"
-                  value={emailInput}
-                  onChange={handleEmailChange}
+                  id="username"
+                  value={nameInput}
+                  onChange={handleNameChange}
                 />
-                <div className="invalid-feedback">{emailError}</div>
-              </div> */}
+                <div className="invalid-feedback">{nameError}</div>
+              </div>
+            </div>
+            <div className="form-group pb-4">
+              <label className="pb-2 " htmlFor="">
+                Company name (optional)
+              </label>
+              <input
+                type="text"
+                placeholder="Company name"
+                className="form-control"
+              />
+            </div>
+            <div className="form-group pb-4">
+              <label className="pb-2 d-block" htmlFor="">
+                Country / Region *
+              </label>
+              <input
+                type="message"
+                onChange={SearchCopmany}
+                value={SeatchCompany}
+                placeholder="Search company"
+                className="form-control mb-3"
+              />
+              <select class="form-select" aria-label="Default select example">
+                {company &&
+                  company
+                    .filter((OneCompany) => {
+                      return SeatchCompany.toLocaleLowerCase() === ""
+                        ? OneCompany
+                        : OneCompany.compony
+                            .toLocaleLowerCase()
+                            .includes(SeatchCompany);
+                    })
+                    .map((OneCompany) => (
+                      <option key={OneCompany.id} selected>
+                        {OneCompany.compony}
+                      </option>
+                    ))}
+
+                {/* <option selected>Azerbaijan</option> */}
+              </select>
+            </div>
+            <div className="form-group pb-4">
+              <label htmlFor="">Street address *</label>
+              <input
+                type="message"
+                placeholder="House nuber and street name"
+                className="form-control mt-2 mb-3"
+              />
+              <input
+                type="message"
+                placeholder="Apart suite, unit,etc (optioanl)"
+                className="form-control"
+              />
+            </div>
+            <div className="form-group pb-4">
+              <label className="pb-2" htmlFor="">
+                Town / City *
+              </label>
+              <input
+                type="message"
+                placeholder="Apart suite, unit,etc (optioanl)"
+                className="form-control"
+              />
+            </div>
+            <div className="form-group pb-4">
+              <label className="pb-2" htmlFor="">
+                Postcode / ZIP *
+              </label>
+              <input
+                type="message"
+                placeholder="Apart suite, unit,etc (optioanl)"
+                className="form-control"
+              />
+            </div>
+            <div className="form-group pb-4">
+              <label htmlFor="">Phone *</label>
+              <input
+                type="message"
+                placeholder="Apart suite, unit,etc (optioanl)"
+                className="form-control"
+              />
+            </div>
+            <div className="form-group pb-4">
+              <label className="pb-2" htmlFor="">
+                Email address *
+              </label>
+              <input
+                type="email"
+                className={`form-control ${
+                  emailError ? "is-invalid" : emailInput ? "is-valid" : ""
+                }`}
+                id="email"
+                value={emailInput}
+                onChange={handleEmailChange}
+              />
+              <div className="invalid-feedback">{emailError}</div>
+            </div>
+            <div className="pb-4">
+              <input type="checkbox" />
+              <span className="p-4">Create an account?</span>
             </div>
           </div>
           <div className="Cheackout-section-right col-12 col-md-6">
-            <h1>Additional information</h1>
+            <h1 className="pb-5">Additional information</h1>
+            <div className="form-group pb-4">
+              <label className="pb-2" htmlFor="">
+                {" "}
+                Order notes (optioanal)
+              </label>
+              <textarea
+                placeholder="Notes about your order,e g special notes for delivery"
+                class="form-control"
+                aria-label="With textarea"
+              ></textarea>
+            </div>
           </div>
+        </section>
+        <section className="Cheackout-section-bottom">
+          <h1 >Your order</h1>
+          {context.state.cart.map((book) => (
+            <div className="">
+              <div className="Cheackout-section-bottom-any d-flex justify-content-between">
+                <h4>Product </h4>
+                <h4>Subtotal</h4>
+              </div>
+              <div className="Cheackout-section-bottom-any d-flex justify-content-between">
+                <span>{book.name}</span>
+                <span>${book.price}</span>
+              </div>
+              <div className="Cheackout-section-bottom-any d-flex justify-content-between">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          ))}
         </section>
       </div>
     </section>

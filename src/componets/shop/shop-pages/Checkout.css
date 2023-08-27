@@ -1,9 +1,11 @@
 .Cheackout-section {
     padding-top: 85px;
 }
-.Cheackout-accardion1{
+
+.Cheackout-accardion1 {
     padding-top: 70px;
 }
+
 .Cheackout-top {
     display: flex;
     justify-content: space-between;
@@ -22,15 +24,40 @@
     transition: height ease 0.5s;
     padding-top: 30px;
 }
-.Cheackout-bottom span{
+
+.Cheackout-bottom span {
     color: #acacac;
 }
+
 .Cheackout-bottom-active {
     height: 460px;
     overflow-y: none;
     transition: height ease 0.5s;
-}.Cheackout-bottom-active2{
+}
+
+.Cheackout-bottom-active2 {
     height: 130px;
     overflow-y: none;
     transition: height ease 0.5s;
+}
+
+.Cheackout-section-bottom h1 {
+    color: black;
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+
+.Cheackout-section-bottom h4 {
+    padding: 10px 0;
+    color: black;
+}
+
+.Cheackout-section-bottom span {
+    display: inline-block;
+    padding: 10px 0;
+    color: #888787;
+}
+
+.Cheackout-section-bottom-any {
+    border-bottom: #acacac 1px solid;
 }
