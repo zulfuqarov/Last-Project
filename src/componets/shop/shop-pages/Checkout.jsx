@@ -184,6 +184,28 @@ const Checkout = () => {
       });
   }, []);
   // copany data end
+
+  // Cheackout-section-bootom2 accardion start
+  const [radioAccardion1, setradioAccardion] = useState(false);
+  const radioAccardion1Click = () => {
+    setradioAccardion(!radioAccardion1);
+    setradioAccardio2(false);
+    setradioAccardio3(false);
+  };
+  const [radioAccardion2, setradioAccardio2] = useState(false);
+  const radioAccardion2Click = () => {
+    setradioAccardio2(!radioAccardion2);
+    setradioAccardion(false);
+    setradioAccardio3(false);
+  };
+  const [radioAccardion3, setradioAccardio3] = useState(false);
+  const radioAccardion3Click = () => {
+    setradioAccardio3(!radioAccardion3);
+    setradioAccardion(false);
+    setradioAccardio2(false)
+  };
+
+  // Cheackout-section-bootom2 accardion end
   return (
     <section className="Cheackout-section">
       <NavbarLinksAlllHeader
@@ -454,23 +476,76 @@ const Checkout = () => {
           </div>
         </section>
         <section className="Cheackout-section-bottom">
-          <h1 >Your order</h1>
+          <h1>Your order</h1>
+          <div className="Cheackout-section-bottom-any d-flex justify-content-between">
+            <h4>Product </h4>
+            <h4>Subtotal</h4>
+          </div>
           {context.state.cart.map((book) => (
             <div className="">
               <div className="Cheackout-section-bottom-any d-flex justify-content-between">
-                <h4>Product </h4>
-                <h4>Subtotal</h4>
-              </div>
-              <div className="Cheackout-section-bottom-any d-flex justify-content-between">
-                <span>{book.name}</span>
-                <span>${book.price}</span>
-              </div>
-              <div className="Cheackout-section-bottom-any d-flex justify-content-between">
-                <span></span>
-                <span></span>
+                <span>
+                  {book.name} x{book.counts}
+                </span>
+                <span>${(book.price * book.counts).toFixed(2)}</span>
               </div>
             </div>
           ))}
+          <div className="Cheackout-section-bottom-any d-flex justify-content-between">
+            <p>Sub total</p>
+            <p>{totalPriceBooks}</p>
+          </div>
+          <div className="Cheackout-section-bottom-any d-flex justify-content-between">
+            <p>Total</p>
+            <p>{totalPriceBooks}</p>
+          </div>
+        </section>
+        <section className="Cheackout-section-bootom2">
+          <input onClick={radioAccardion1Click} type="radio" name="radio" />
+          <span>Direct bank transfer</span>
+          <div
+            className={`Cheackout-section-bootom2-radio-accardion
+          ${
+            radioAccardion1
+              ? "Cheackout-section-bootom2-radio-accardion-active"
+              : ""
+          }
+          `}
+          >
+            <p>
+              Make your payment directyl our bank account. Please use your Order
+              ID as the payment reference. Your order will not be shipped until
+              the funds have cleared in our account
+            </p>
+          </div>
+
+          <input onClick={radioAccardion2Click} type="radio" name="radio" />
+          <span>Direct bank transfer</span>
+          <div
+            className={`Cheackout-section-bootom2-radio-accardion
+          ${
+            radioAccardion2
+              ? "Cheackout-section-bootom2-radio-accardion-active"
+              : ""
+          }
+          `}
+          >
+            <p>
+              Please send a check to Store Name, Store Street, Store Town, Store
+              State / County, Store Postcode.
+            </p>
+          </div>
+
+          <input onClick={radioAccardion3Click} type="radio" name="radio" />
+          <span>Direct bank transfer</span>
+          <div className={`Cheackout-section-bootom2-radio-accardion
+          ${radioAccardion3 ? "Cheackout-section-bootom2-radio-accardion-active" : ""}`}>
+            <p>Pay with cash upon delivery.</p>
+          </div>
+
+          <div className="Cheackout-section-bootom2-btn">
+            <button className="">Place Order</button>
+          </div>
         </section>
       </div>
     </section>

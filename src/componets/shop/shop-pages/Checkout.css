@@ -54,10 +54,58 @@
 
 .Cheackout-section-bottom span {
     display: inline-block;
-    padding: 10px 0;
+    padding: 15px 0;
     color: #888787;
+    font-weight: 700;
 }
 
 .Cheackout-section-bottom-any {
     border-bottom: #acacac 1px solid;
+}
+.Cheackout-section-bottom-any p{
+    color: #504f4f;
+    padding: 15px 0;
+    font-weight: 700;
+}
+.Cheackout-section-bootom2{
+    padding-top: 50px;
+}
+.Cheackout-section-bootom2 input{
+    color: #888787;
+}
+.Cheackout-section-bootom2 span{
+    color: #888787;
+    display: inline-block;
+    padding: 10px 10px;
+}
+.Cheackout-section-bootom2-radio-accardion{
+    padding: 10px 0;
+    border-bottom: #acacac 1px solid;
+}
+.Cheackout-section-bootom2-radio-accardion p{
+    color: #888787;
+    font-size: 15px;
+    height: 0;
+    overflow-y: hidden;
+    transition: 0.5s height ease;
+}
+.Cheackout-section-bootom2-radio-accardion-active p{
+    height: 50px;
+    overflow-y: none;
+    display: flex;
+    align-items: center; 
+}
+.Cheackout-section-bootom2-btn{
+    padding-top: 30px;
+}
+.Cheackout-section-bootom2-btn button{
+    color: white;
+    font-weight: 700;
+    border: none;
+    background-color: #2d76b2;
+    padding: 13px 40px;
+    transition: all ease 0.5s;
+}
+.Cheackout-section-bootom2-btn button:hover{
+    background-color: #504f4f;
 }
