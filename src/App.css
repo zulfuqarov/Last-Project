@@ -8,3 +8,52 @@ body {
 .pwm-field-icon {
     display: none !important;
 }
+.Notefound{
+    padding-top: 85px;
+    background-image: url(../src/assets/404.png);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.Notefound-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+}
+.Notefound-center h1{
+    font-weight: 700;
+    font-size: 80px;
+    color: #434343;
+    letter-spacing: 5px;
+    padding-bottom: 20px;
+}
+.Notefound-center p{
+    font-weight: 700;
+    font-size: 22px;
+    color: #434343;
+    padding-bottom: 30px;
+    letter-spacing: 1px;
+}
+.Notefound-center span{
+    color: #8f8f8f;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 30px;
+}
+.Notefound-center button{
+    margin-top: 50px;
+    border: none;
+    background-color: #2d76b2;
+    padding: 20px 42px;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    transition: 0.5s ease all;
+}
+.Notefound-center button:hover{
+    background-color: #434343;
+}

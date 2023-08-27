@@ -20,6 +20,7 @@ import Register from "./componets/register/Register";
 import LostPassword from "./componets/Fixpassword/LostPassword";
 import ConfirmPassword from "./componets/Fixpassword/Changepassword";
 import Checkout from "./componets/shop/shop-pages/Checkout";
+import Notefound from "./pages/Notefound";
 
 export const BooksContext = createContext();
 
@@ -108,6 +109,8 @@ function App() {
         <BrowserRouter>
           <Navbar />
           <Routes>
+            <Route path="/*" element={<Notefound />} />
+            <Route path="/error" element={<Notefound />} />
             <Route path="/" element={<Home />} />
             <Route path="/Teachers" element={<Pagesteacher />} />
             <Route path="Shop-List" element={<Shop />} />

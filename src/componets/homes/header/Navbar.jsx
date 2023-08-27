@@ -295,7 +295,7 @@ const Navbar = () => {
                     </ul>
                   </li>
                   <li>
-                    <a href="">404 Page</a>
+                    <Link to="/error">404 Page</Link>
                   </li>
                 </ul>
               </li>
