@@ -1,0 +1,73 @@
+.CoursesList3 {
+    padding-top: 85px;
+}
+
+.CoursesList3-left-side {
+    border-right: 1px solid #d4d4d4;
+    margin-top: 90px;
+}
+
+.CoursesList3-right-side {
+    margin-top: 90px;
+}
+
+.CoursesList3-back-fo3 {
+    background-image: url(./img/course-tittle-area.jpg);
+    background-attachment: fixed;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 180px;
+    align-items: center;
+    color: white !important;
+    font-size: 22px;
+}
+
+.CoursesList3-right-side-top h1 {
+    font-size: 22px;
+    color: rgb(51, 51, 51);
+    font-weight: 700;
+    padding: 10px 0 30px 10px;
+}
+
+.CoursesList3-right-side-top span {
+    display: block;
+    padding: 13px 0;
+    margin: 0 25px;
+    font-size: 15px;
+    color: #7e7e7e;
+    border-bottom: #c2c2c2 1px solid;
+}
+
+.CoursesList3-right-side-bottom {
+    padding-top: 70px;
+}
+
+.CoursesList3-right-side-bottom h1 {
+    font-size: 22px;
+    color: rgb(51, 51, 51);
+    font-weight: 700;
+    padding: 10px 0 30px 10px;
+}
+.CoursesList3-right-side-bottom-carts{
+    padding: 20px 15px;
+    display: flex;
+}
+.CoursesList3-right-side-bottom-carts h1{
+    font-size: 15px;
+    color: #303030;
+    padding: 5px 0 15px 15px;
+}
+.CoursesList3-right-side-bottom-carts span{
+    color: #2d76b2;
+    display: inline-block;
+    padding: 5px 0 15px 15px;
+    font-size: 14px;
+}
+
+.carts-img-any{
+    width: 105px;
+}
+.carts-img-any img{
+    width: 100%;
+}

@@ -168,7 +168,9 @@ const Navbar = () => {
                         </a>
                       </li>
                       <li>
-                        <a href="">Courses List 3 Columns</a>
+                        <Link to="/courses-list-3-column">
+                          Courses List 3 Columns
+                        </Link>
                       </li>
                       <li>
                         <a href="">Courses List 4 Columns</a>

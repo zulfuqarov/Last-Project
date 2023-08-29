@@ -21,6 +21,7 @@ import LostPassword from "./componets/Fixpassword/LostPassword";
 import ConfirmPassword from "./componets/Fixpassword/Changepassword";
 import Checkout from "./componets/shop/shop-pages/Checkout";
 import Notefound from "./pages/Notefound";
+import CoursesList3 from "./componets/courses/CoursesList3";
 
 export const BooksContext = createContext();
 
@@ -112,6 +113,7 @@ function App() {
             <Route path="/*" element={<Notefound />} />
             <Route path="/error" element={<Notefound />} />
             <Route path="/" element={<Home />} />
+            <Route path="/courses-list-3-column" element={<CoursesList3 />} />
             <Route path="/Teachers" element={<Pagesteacher />} />
             <Route path="Shop-List" element={<Shop />} />
             <Route path="Product-single" element={<ShopProc />} />

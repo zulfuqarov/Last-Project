@@ -628,5 +628,140 @@
             "id": 100,
             "compony": "Argentina"
         }
+    ],
+    "Courses": [
+        {
+            "id": 1,
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1693318660/course-img-7_f41tmk.jpg",
+            "titile": "Photography",
+            "price": "170",
+            "Links": "Amy Drufesne"
+        },
+        {
+            "id": 2,
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1693318793/course-img-4_abfpzz.jpg",
+            "titile": "Statistics",
+            "price": "190",
+            "Links": "Martina Moore"
+        },
+        {
+            "id": 3,
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1693318788/course-img-3_ihdbup.jpg",
+            "titile": "Learning CAD",
+            "price": "210",
+            "Links": "Martina Moore"
+        },
+        {
+            "id": 4,
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1693318783/course-img-2_xpestg.jpg",
+            "titile": "Sports Stats",
+            "price": "120",
+            "Links": "Taylor Fink"
+        },
+        {
+            "id": 5,
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1693318660/course-img-10-768x491_fuzzvf.jpg",
+            "titile": "Sports Stats",
+            "price": "160",
+            "Links": "Taylor Fink"
+        },
+        {
+            "id": 6,
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1693318660/course-img-8-768x491_i8nrww.jpg",
+            "titile": "Sports Stats",
+            "price": "120",
+            "Links": "Taylor Fink"
+        },
+        {
+            "id": 7,
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1693318660/course-img-6_1_taajqe.jpg",
+            "titile": "Swimming for Kids",
+            "price": "120",
+            "Links": "Taylor Fink"
+        },
+        {
+            "id": 1,
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1693318659/course-img-1_1_vvpunl.jpg",
+            "titile": "Business Strategy 101",
+            "price": "120",
+            "Links": "Taylor Fink"
+        },
+        {
+            "id": 8,
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1693318659/course-img-12-768x491_bbojo8.jpg",
+            "titile": "Digital Marketing",
+            "price": "220",
+            "Links": "Taylor Fink"
+        },
+        {
+            "id": 9,
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1693318659/course-img-11-768x491_o6jl9q.jpg",
+            "titile": "Spanish Basic",
+            "price": "125",
+            "Links": "Martina Moore"
+        },
+        {
+            "id": 10,
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1693318659/course-img-12-768x491_bbojo8.jpg",
+            "titile": "SEO Training",
+            "price": "210",
+            "Links": "Taylor Fink"
+        },
+        {
+            "id": 11,
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1693318660/course-img-6_1_taajqe.jpg",
+            "titile": "SEO Training",
+            "price": "190",
+            "Links": "Martina Moore"
+        },
+        {
+            "id": 12,
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1693318783/course-img-2_xpestg.jpg",
+            "titile": "",
+            "price": "120",
+            "Links": ""
+        },
+        {
+            "id": 13,
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1693318660/course-img-6_1_taajqe.jpg",
+            "titile": "Modeling",
+            "price": "120",
+            "Links": "Preston Marshall"
+        },
+        {
+            "id": 14,
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1693322099/course-img-16_nndonj.jpg",
+            "titile": "Photography",
+            "price": "170",
+            "Links": "Amy Drufesne"
+        },
+        {
+            "id": 15,
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1693322105/course-img-19_lhafjb.jpg",
+            "titile": "Little Champions",
+            "price": "190",
+            "Links": "Melisa jones"
+        },
+        {
+            "id": 16,
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1693322110/course-img-20_dyix2h.jpg",
+            "titile": "After School Sport",
+            "price": "210",
+            "Links": "Melisa jones"
+        },
+        {
+            "id": 17,
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1693322103/course-img-18_viiowo.jpg",
+            "titile": "Fun Yoga for Toddlers",
+            "price": "120",
+            "Links": "Taylor Fink"
+        },
+        {
+            "id": 17,
+            "img": "https://res.cloudinary.com/dviivhiqd/image/upload/v1693322103/course-img-18_viiowo.jpg",
+            "titile": "Fun Yoga for Toddlers",
+            "price": "120",
+            "Links": "Taylor Fink"
+        }
     ]
 }
