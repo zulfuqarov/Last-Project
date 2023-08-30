@@ -22,6 +22,7 @@ import ConfirmPassword from "./componets/Fixpassword/Changepassword";
 import Checkout from "./componets/shop/shop-pages/Checkout";
 import Notefound from "./pages/Notefound";
 import CoursesList3 from "./componets/courses/CoursesList3";
+import ScrollTop from "../scrolltop/ScrollTop";
 
 export const BooksContext = createContext();
 
@@ -108,6 +109,7 @@ function App() {
         }}
       >
         <BrowserRouter>
+          <ScrollTop />
           <Navbar />
           <Routes>
             <Route path="/*" element={<Notefound />} />

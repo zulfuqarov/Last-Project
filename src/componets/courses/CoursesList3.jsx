@@ -33,6 +33,21 @@ const CoursesList3 = () => {
 
   const visibleItems = courses.slice(startIndex, endIndex);
 
+  //   bars flex button start
+  const [barsrow, setbarsrow] = useState(true);
+  const [barscolumn, setbarscolumn] = useState(false);
+
+  const ColumnbarsClick = () => {
+    setbarscolumn(true);
+    setbarsrow(false);
+  };
+  const RowbarsClick = () => {
+    setbarsrow(true);
+    setbarscolumn(false);
+  };
+
+  //   bars flex button end
+
   return (
     <section className="CoursesList3">
       <NavbarLinksAlllHeader
@@ -42,23 +57,57 @@ const CoursesList3 = () => {
       />
       <div className="container">
         <div className="row">
-          <div className="CoursesList3-left-side col-12 col-md-9">
-            <div className="CoursesList3-left-side-top"></div>
+          <div className="CoursesList3-left-side col-12 col-lg-9">
+            <div className="CoursesList3-left-side-top d-flex justify-content-between">
+              <div className="CoursesList3-left-side-top-div">
+                <i
+                  onClick={RowbarsClick}
+                  className="fa-solid fa-grip-vertical column-androw-icons-any"
+                ></i>
+                <i
+                  onClick={ColumnbarsClick}
+                  className="fa-solid fa-bars column-androw-icons-any"
+                ></i>
+                <span>Showing 1 – 6 of 23</span>
+              </div>
+              <select name="" id="">
+                <option value="Newly Publised">Newly Publised</option>
+                <option value="">A-Z</option>
+                <option value="">Z-A</option>
+              </select>
+            </div>
             <div className="CoursesList3-left-side-center-carts">
               <div className="row Popular-cardt ">
-                {visibleItems.map((courses, index) => (
-                  <div
-                    key={index}
-                    className="col-12 col-md-6 col-lg-4 col-xl-4 pt-3"
-                  >
-                    <CardsProps
-                      popularimg={courses.img}
-                      popularabout="Photography"
-                      popularprice="120"
-                      popularlinks="Amy Drufesne"
-                    />
-                  </div>
-                ))}
+                {barsrow &&
+                  visibleItems.map((courses, index) => (
+                    <div
+                      key={index}
+                      className="col-12 col-sm-6 col-md-6   col-xl-4 pt-3"
+                    >
+                      <CardsProps
+                        popularimg={courses.img}
+                        popularabout="Photography"
+                        popularprice="120"
+                        popularlinks="Amy Drufesne"
+                      />
+                    </div>
+                  ))}
+                {barscolumn &&
+                  visibleItems.map((courses, index) => (
+                    <div key={index} className="col-12">
+                      <CardsProps
+                        PopularCardtClass={`${barscolumn && "d-flex"}`}
+                        popularimg={courses.img}
+                        popularabout="Photography"
+                        popularprice="120"
+                        popularlinks="Amy Drufesne"
+                        PopularCardtImgClass="PopularCardtImgClass"
+                        PopularCardtAboutClass="PopularCardtClass-props"
+                        PopularCardtAboutTopClass="justify-content-between"
+                        PopularCardtAboutBottomSpanClass="Popular-about-bottom-span-props"
+                      />
+                    </div>
+                  ))}
               </div>
             </div>
             <div className="pagination-div">
@@ -75,7 +124,7 @@ const CoursesList3 = () => {
               />
             </div>
           </div>
-          <div className="CoursesList3-right-side col-12 col-md-3">
+          <div className="CoursesList3-right-side col-12 col-md-6 col-lg-3">
             <div className="CoursesList3-right-side-top">
               <h1>Categories</h1>
               <span>Art & DEsign</span>

@@ -71,3 +71,48 @@
 .carts-img-any img{
     width: 100%;
 }
+.fa-grip-vertical{
+    padding-right: 30px;
+    
+}
+.column-androw-icons-any{
+    cursor: pointer; 
+}
+.column-androw-icons-any:hover{
+    color: #2d76b2;
+}
+.PopularCardtImgClass{
+    width: 300px;
+}
+.PopularCardtImgClass img{
+    width: 100%;
+}
+.Popular-about-bottom-span{
+    width: 213px;
+}
+.Popular-about-bottom-span-props{
+    width: 100%;
+}
+.PopularCardtClass-props{
+    padding-top: 60px !important;
+}
+.CoursesList3-left-side-top-div span{
+    font-size: 15px;
+    color: #7e7e7e;
+    display: inline-block;
+    padding-left: 25px;
+}
+.CoursesList3-left-side-top select{
+    border:  none;
+    color: #7e7e7e;
+    font-size: 15px;
+    float: right;
+}
+@media (max-width:768px) {
+    .PopularCardtImgClass{
+        width: 250px;
+    }
+    .PopularCardtClass-props{
+        width: 300px;
+    }
+}
