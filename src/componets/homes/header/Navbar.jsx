@@ -357,7 +357,7 @@ const Navbar = () => {
 
                     <ul className="Post-bottom">
                       <li>
-                        <a href="">Standard Post</a>
+                        <Link to="/Standart-Post">Standard Post</Link>
                       </li>
                       <li>
                         <a href="">Link Post</a>

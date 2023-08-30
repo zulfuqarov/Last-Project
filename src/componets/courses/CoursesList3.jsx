@@ -8,7 +8,9 @@ import img1 from "./img/course-img-7.jpg";
 import img2 from "./img/course-img-8-768x491.jpg";
 import img3 from "./img/course-img-9-768x491.jpg";
 
+
 const itemsPerPage = 6;
+
 
 const CoursesList3 = () => {
   const [currentPage, setCurrentPage] = useState(0);
