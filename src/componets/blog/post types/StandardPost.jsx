@@ -4,8 +4,9 @@ import "./StandartPost.css";
 import StandartPostimg1 from "./img/blog-img-1.jpg";
 import StandartPostimg2 from "./img/0245b5dae5cdfe6a7bf50c9abbe71c31.png";
 import StandartPostimg3 from "./img/commentimg2.jpeg";
-import axios from "axios";
-
+import StandartPostimg4 from "./img/blog-img-9-150x150.jpg";
+import StandartPostimg5 from "./img/blog-img-10-150x150.jpg";
+import StandartPostimg6 from "./img/blog-featured-13-150x150.jpg";
 const StandardPost = () => {
   // validaions succes and error start
   function ShowError(input, message = "xeta bash verdi") {
@@ -366,7 +367,52 @@ const StandardPost = () => {
               </form>
             </div>
           </div>
-          <div className="StandardPost-section-right col-12 col-lg-3"></div>
+          <div className="StandardPost-section-right col-12 col-lg-3">
+            <h1>Popular Post</h1>
+            <div className="d-flex StandardPost-section-right-cart">
+              <div className="StandardPost-section-right-img">
+                <img src={StandartPostimg4} alt="" />
+              </div>
+              <span>
+                Experiences <br /> Through <br /> Education
+              </span>
+            </div>
+            <div className="d-flex StandardPost-section-right-cart">
+              <div className="StandardPost-section-right-img">
+                <img src={StandartPostimg5} alt="" />
+              </div>
+              <span>
+                Experiences <br /> Through <br /> Education
+              </span>
+            </div>
+            <div className="d-flex StandardPost-section-right-cart">
+              <div className="StandardPost-section-right-img">
+                <img src={StandartPostimg6} alt="" />
+              </div>
+              <span>
+                Experiences <br /> Through <br /> Education
+              </span>
+            </div>
+            <h1>Categories</h1>
+            <div className="StandardPost-section-right-categories">
+              <p>Business</p>
+              <p>Cultre</p>
+              <p>Economy</p>
+              <p>Education</p>
+              <p>Motivation</p>
+            </div>
+            <h1>Tags</h1>
+            <div className="StandardPost-section-right-tags">
+              <span>BIOLOGY</span>
+              <span>BOKKS</span>
+              <span>HISTORY</span> <br />
+              <span>LECTURE</span>
+              <span>LIBRARY</span>
+              <span>PHYSICS</span> <br />
+              <span>PRACTICE</span>
+              <span>SCHOOL</span>
+            </div>
+          </div>
         </section>
       </div>
     </section>

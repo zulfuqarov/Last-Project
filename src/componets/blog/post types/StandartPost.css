@@ -220,3 +220,41 @@
     color: white;
     padding: 20px;
 }
+.StandardPost-section-right h1{
+    font-size: 22px;
+    color: #434343;
+    font-weight: 700;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.StandardPost-section-right-cart {
+    padding-top: 25px;
+}
+.StandardPost-section-right-cart span{
+    display: inline-block;
+    padding-left: 15px;
+    padding-top: 15px;
+    font-size: 15px;
+    line-height: 25px;
+    color: #999999;
+}
+.StandardPost-section-right-img{
+    width: 97px;
+}
+.StandardPost-section-right-img img{
+    width: 100%;
+}
+.StandardPost-section-right-categories p{
+    padding: 15px 0;
+    border-bottom: #c2c2c2 1px solid;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.StandardPost-section-right-tags span{
+    padding-right: 15px;
+    padding-bottom: 15px;
+    display: inline-block;
+    font-size: 13px;
+    color: black;
+}

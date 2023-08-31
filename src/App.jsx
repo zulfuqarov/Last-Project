@@ -22,7 +22,7 @@ import ConfirmPassword from "./componets/Fixpassword/Changepassword";
 import Checkout from "./componets/shop/shop-pages/Checkout";
 import Notefound from "./pages/Notefound";
 import CoursesList3 from "./componets/courses/CoursesList3";
-import ScrollTop from "./scrolltop/ScrollTop"
+import ScrollTop from "./scrolltop/ScrollTop";
 import StandardPost from "./componets/blog/post types/StandardPost";
 
 export const BooksContext = createContext();
@@ -127,7 +127,7 @@ function App() {
             <Route path="/Change-Password" element={<LostPassword />} />
             <Route path="/Confirm-Password" element={<ConfirmPassword />} />
             <Route path="/Checkout" element={<Checkout />} />
-            <Route path="/Standart-Post" element={<StandardPost/>} />
+            <Route path="/Standart-Post" element={<StandardPost />} />
           </Routes>
           <Footer />
         </BrowserRouter>
